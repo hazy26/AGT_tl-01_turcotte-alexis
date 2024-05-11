@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16 Fonctionnalités CSS3</title>
+    <link rel="stylesheet" href="/index.034b6250.css">
+    <script src="/index.b4ce7916.js" defer=""></script>
+</head>
+<body>
+    <header>
+        <nav class="hidden">
+            <ul class="first-level">
+                <li>
+                    <a class="nav__link" href="#a">A</a>
+                    <ul>
+                        <li><a class="nav__link level-2__link" href="#animation">animation</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="nav__link" href="#b">B</a>
+                    <ul>
+                        <li><a class="nav__link level-2__link" href="#backface-visibility">backface-visibility</a></li>
+                        <li><a class="nav__link level-2__link" href="#border-image">border-image</a></li>
+                        <li><a class="nav__link level-2__link" href="#border-radius">border-radius</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="nav__link" href="#c">C</a>
+                    <ul>
+                        <li><a class="nav__link level-2__link" href="#columns">columns</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="nav__link" href="#f">F</a>
+                    <ul>
+                        <li><a class="nav__link level-2__link" href="#filter">filter</a></li>
+                        <li><a class="nav__link level-2__link" href="#flexbox-layout">flexbox Layout</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="nav__link" href="#g">G</a>
+                    <ul>
+                        <li><a class="nav__link level-2__link" href="#gradients">gradients</a></li>
+                        <li><a class="nav__link level-2__link" href="#grid-layout">grid Layout</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="nav__link" href="#o">O</a>
+                    <ul>
+                        <li><a class="nav__link level-2__link" href="#object-fit">object-fit</a></li>
+                        <li><a class="nav__link level-2__link" href="#opacity">opacity</a></li>
+                        <li><a class="nav__link level-2__link" href="#outline-offset">outline-offset</a></li>
+                        <li><a class="nav__link level-2__link" href="#overflow">overflow</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="nav__link" href="#t">T</a>
+                    <ul>
+                        <li><a class="nav__link level-2__link" href="#transform">transform</a></li>
+                        <li><a class="nav__link level-2__link" href="#transition">transition</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="nav__link" href="#w">W</a>
+                    <ul>
+                        <li><a class="nav__link level-2__link" href="#writing-mode">writing-mode</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <h1><a href="/index.html">16 Fonctionnalités CSS3</a></h1>
+        <i>
+            <svg class="menu__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="35" viewbox="0 0 50 50">
+                <path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 L 0 7.5 z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 L 0 22.5 z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 L 0 37.5 z">
+                </path>
+            </svg>
+        </i>
+    </header>
+    <main id="main">
+        <a class="btn__retour-haut hidden">
+            <i>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewbox="0 -960 960 960" width="24">
+                    <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"></path>
+                </svg>
+            </i>
+        </a>
+        <ul class="css3-list__main-container">
+            <li id="a" class="main-list__item">
+                <h2 class="lettre">A</h2>
+                <ul class="properties__container">
+                    <li class="properties__item animation">
+                        <h3 id="animation">animation</h3>
+                        <div class="dropdown hidden">
+                            <section>
+                                <h4>Explication</h4>
+                                <p>La propriété CSS animation permet de créer des animations en définissant les étapes
+                                    clés d'une animation, comme le début, la fin et les changements intermédiaires,
+                                    ainsi que d'autres paramètres tels que la durée et le type de l'animation.</p>
+                            </section>
+                            <section class="animation__exemple">
+                                <div class="animation__exemple">
+                                    <h4>Exemple</h4>
+                                </div>
+                            </section>
+                            <section>
+                                <h4>Le CSS</h4>
+                                <textarea name="animation">
+        div.animation__exemple{
+        animation-name: animation__exemple;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        position: absolute;
+        }
+
+        @keyframes animation__exemple {
+        0%   {background-color:var(--couleur-un); left:0px; top:0px;color: var(--couleur-deux);}
+        25%  {background-color:var(--couleur-quatre); left:200px; top:0px;color: var(--couleur-un);}
+        50%  {background-color:var(--couleur-cinq); left:200px; top:200px;color: var(--couleur-un);}
+        75%  {background-color: rgb(255, 191, 72); left:0px; top:200px;color: var(--couleur-un);}
+        100% {background-color:var(--couleur-un); left:0px; top:0px;color: var(--couleur-deux);}
+        }
+                                </textarea>
+                            </section>
+                            <section>
+                                <h4>Documentation supplémentaire</h4>
+                                <ul>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes" target="_blank">@keyframes</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation" target="_blank">animation</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay" target="_blank">animation-delay</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction" target="_blank">animation-direction</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-duration" target="_blank">animation-duration</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count" target="_blank">animation-iteration-count</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name" target="_blank">animation-name</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function" target="_blank">animation-timing-function</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode" target="_blank">animation-fill-mode</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li id="b" class="main-list__item">
+                <h2 class="lettre">B</h2>
+                <ul class="properties__container">
+                    <li class="properties__item">
+                        <h3 id="backface-visibility">backface-visibility</h3>
+                        <div class="dropdown hidden">
+                            <section>
+                                <h4>Explication</h4>
+                                <p>La propriété CSS backface-visibility contrôle la visibilité de la face arrière (le
+                                    verso) d'un élément en 3D lorsqu'il est incliné ou retourné. Elle est utilisée
+                                    principalement avec les transformations 3D en CSS, comme rotateY() ou rotateX().
+                                    Cette propriété est utile lorsque vous effectuez des rotations d'éléments et que
+                                    vous ne souhaitez pas que le contenu de la face arrière soit visible pendant la
+                                    rotation.</p>
+                                <p>Lorsque backface-visibility est définie sur visible, la face arrière d'un élément est
+                                    rendue visible pendant les rotations. Cela signifie que si l'élément est incliné ou
+                                    retourné, vous pouvez voir son verso.</p>
+                                <p>Lorsque backface-visibility est définie sur hidden, la face arrière de l'élément est
+                                    rendue invisible pendant les rotations. Cela signifie que le verso de l'élément ne
+                                    sera pas visible lorsqu'il est incliné ou retourné.</p>
+                            </section>
+                            <section>
+                                <h4>Exemple</h4>
+                                <div class="backface-visibility-exemple">
+                                    <div class="backface-visibility">
+                                        <p>Ici la face #2 est visible.</p>
+                                        <div class="frontface-1">1</div>
+                                        <div class="backface __visible">2</div>
+                                    </div>
+                                    <div class="backface-visibility">
+                                        <p>Ici la face #2 est cachée.</p>
+                                        <div class="frontface-2">1</div>
+                                        <div class="backface __hidden">2</div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <h4>Le CSS</h4>
+                                <textarea name="backface-visibility">
+        .element.visible{
+        backface-visibility: visible;
+        }
+
+        .element.hidden{
+        backface-visibility: hidden;
+        }
+                                </textarea>
+                            </section>
+                            <section>
+                                <h4>Documentation supplémentaire</h4>
+                                <ul>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/backface-visibility" target="_blank">backface-visibility</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li class="properties__item">
+                        <h3 id="border-image">border-image</h3>
+                        <div class="dropdown hidden">
+                            <section>
+                                <h4>Explication</h4>
+                                <p>En CSS, la propriété border-image vous permet de définir une image comme bordure d'un
+                                    élément HTML au lieu d'utiliser une bordure standard. Cela vous donne un contrôle
+                                    plus précis sur l'apparence de la bordure, en utilisant une image personnalisée
+                                    plutôt qu'une simple couleur ou un style prédéfini.</p>
+                                <p>La propriété border-image prend plusieurs valeurs, mais les deux valeurs principales
+                                    sont :</p>
+                                <p>1. L'URL de l'image à utiliser comme bordure.</p>
+                                <p>2. Les valeurs pour définir la découpe (slicing) de l'image en neuf parties : les
+                                    coins, les bords et le centre. Ces valeurs sont souvent spécifiées sous forme de
+                                    nombres, indiquant la distance à partir du bord de l'image jusqu'à la ligne de
+                                    découpe.</p>
+                            </section>
+                            <section>
+                                <h4 class="border-image">Exemple</h4>
+                            </section>
+                            <section>
+                                <h4>Le CSS</h4>
+                                <textarea name="border-image">
+        .element{
+        border: 2rem solid transparent;
+        border-image: url("border-image.png") 100 round;
+        }
+                                </textarea>
+                            </section>
+                            <section>
+                                <h4>Documentation supplémentaire</h4>
+                                <ul>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-image" target="_blank">border-image</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-outset" target="_blank">border-image-outset</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-repeat" target="_blank">border-image-repeat</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-slice" target="_blank">border-image-slice</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-source" target="_blank">border-image-source</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-image-width" target="_blank">border-image-width</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li class="properties__item">
+                        <h3 id="border-radius">border-radius</h3>
+                        <div class="dropdown hidden">
+                            <section>
+                                <h4>Explication</h4>
+                                <p>En CSS, la propriété border-radius est utilisée pour définir le rayon des coins d'un
+                                    élément HTML. Elle permet de créer des coins arrondis plutôt que des coins
+                                    angulaires. Vous pouvez l'utiliser pour rendre les boîtes, les images et d'autres
+                                    éléments avec des coins arrondis.</p>
+                            </section>
+                            <div class="border-radius-exemple">
+                                <div class="border-radius">1</div>
+                                <div class="border-radius exemple-1">2</div>
+                                <div class="border-radius exemple-2">3</div>
+                            </div>
+                            <section>
+                                <h4>Le CSS</h4>
+                                <textarea name="barder-radius">
+        .exemple-1{
+        border-radius: 0;
+        }
+
+        .exemple-2{
+        border-radius: 1rem;
+        }
+
+        .exemple-3{
+        border-radius: 2rem 4rem 6rem 0rem;
+        }
+                                </textarea>
+                            </section>
+                            <section>
+                                <h4>Documentation supplémentaire</h4>
+                                <ul>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius" target="_blank">border-radius</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-left-radius" target="_blank">border-top-left-radius</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top-right-radius" target="_blank">border-top-right-radius</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-left-radius" target="_blank">border-bottom-right-radius</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom-right-radius" target="_blank">border-bottom-left-radius</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li id="c" class="main-list__item">
+                <h2 class="lettre">C</h2>
+                <ul class="properties__container">
+                    <li class="properties__item">
+                        <h3 id="columns">columns</h3>
+                        <div class="dropdown hidden">
+                            <section>
+                                <h4>Explication</h4>
+                                <p>En CSS, la propriété columns est utilisée pour diviser le contenu d'un élément en
+                                    plusieurs colonnes, semblable à la mise en colonnes dans les journaux ou les
+                                    magazines. Cette propriété est souvent utilisée pour créer des mises en page
+                                    multicolumnaires, où le texte ou le contenu est réparti sur plusieurs colonnes
+                                    plutôt que sur une seule.</p>
+                            </section>
+                            <section class="columns__exemple">
+                                <h4>Exemple</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Mi proin sed libero enim sed faucibus
+                                    turpis. Mi eget mauris pharetra et ultrices neque. Commodo quis imperdiet massa
+                                    tincidunt nunc. Tellus orci ac auctor augue mauris. Faucibus scelerisque eleifend
+                                    donec
+                                    pretium. Nunc non blandit massa enim nec dui. Elementum nisi quis eleifend quam
+                                    adipiscing vitae. Sit amet dictum sit amet justo donec enim. Odio ut sem nulla
+                                    pharetra
+                                    diam sit amet nisl. Ut tortor pretium viverra suspendisse potenti nullam ac. Eget
+                                    nunc
+                                    scelerisque viverra mauris in. Sed velit dignissim sodales ut eu sem integer vitae.
+                                    Tempus egestas sed sed risus pretium quam.
+                                </p>
+                                <p>
+                                    Pharetra pharetra massa massa ultricies mi. Cras semper auctor neque vitae tempus
+                                    quam
+                                    pellentesque. Nulla facilisi morbi tempus iaculis. Mollis nunc sed id semper risus
+                                    in
+                                    hendrerit gravida rutrum. Sociis natoque penatibus et magnis dis. Mattis enim ut
+                                    tellus
+                                    elementum sagittis vitae. Erat nam at lectus urna duis convallis convallis tellus.
+                                    In
+                                    egestas erat imperdiet sed euismod nisi. Morbi blandit cursus risus at ultrices mi
+                                    tempus imperdiet. Vitae tempus quam pellentesque nec nam aliquam sem et. Facilisis
+                                    volutpat est velit egestas dui. Elementum nisi quis eleifend quam adipiscing.
+                                    Posuere
+                                    lorem ipsum dolor sit amet consectetur adipiscing elit. Et leo duis ut diam quam
+                                    nulla
+                                    porttitor massa id. Nulla at volutpat diam ut venenatis tellus in metus. Augue eget
+                                    arcu
+                                    dictum varius duis at. Sed egestas egestas fringilla phasellus faucibus.
+                                </p>
+                            </section>
+                            <section>
+                                <h4>Le CSS</h4>
+                                <textarea name="columns">
+        .element{
+        columns: 2;
+        }
+
+        .element .titre{
+        column-span: all;
+        text-align: center;
+        }
+                                </textarea>
+                            </section>
+                            <section>
+                                <h4>Documentation supplémentaire</h4>
+                                <ul>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/columns" target="_blank">columns</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/column-count" target="_blank">column-count</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/column-fill" target="_blank">column-fill</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap" target="_blank">column-gap</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule" target="_blank">column-rule</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-color" target="_blank">columne-rule-color</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-style" target="_blank">column-rule-style</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-width" target="_blank">column-rule-width</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/column-span" target="_blank">column-span</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/column-width" target="_blank">column-width</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li id="f" class="main-list__item">
+                <h2 class="lettre">F</h2>
+                <ul class="properties__container">
+                    <li class="properties__item">
+                        <h3 id="filter">filter</h3>
+                        <div class="dropdown hidden">
+                            <section>
+                                <h4>Explication</h4>
+                                <p>En CSS, la propriété filter permet d'appliquer des effets visuels aux éléments HTML,
+                                    comme des filtres de couleur, de luminosité, de flou, etc. Cela permet de modifier
+                                    l'apparence visuelle des éléments sans modifier le contenu réel. La propriété filter
+                                    prend en charge plusieurs valeurs qui correspondent à différents effets visuels.</p>
+                            </section>
+                            <section>
+                                <h4>Exemples</h4>
+                                <div class="filter__exemples">
+                                    <figure class="filter-1">
+                                        <figcaption>Brightness 50%</figcaption>
+                                        <img src="https://picsum.photos/id/320/200/300" alt="">
+                                    </figure>
+
+                                    <figure class="filter-2">
+                                        <figcaption>Contrast 150%</figcaption>
+                                        <img src="https://picsum.photos/id/320/200/300" alt="">
+                                    </figure>
+
+                                    <figure class="filter-3">
+                                        <figcaption>Grayscale 100%</figcaption>
+                                        <img src="https://picsum.photos/id/320/200/300" alt="">
+                                    </figure>
+
+                                    <figure class="filter-4">
+                                        <figcaption>Invert 100%</figcaption>
+                                        <img src="https://picsum.photos/id/320/200/300" alt="">
+                                    </figure>
+
+                                    <figure class="filter-5">
+                                        <figcaption>Saturate 300%</figcaption>
+                                        <img src="https://picsum.photos/id/320/200/300" alt="">
+                                    </figure>
+                                </div>
+                            </section>
+                            <section>
+                                <h4>Le CSS</h4>
+                                <textarea name="filter">
+        .element-1{
+        filter: brightness(.5);
+        }
+
+        .element-2{
+        filter: contrast(1.5);
+        }
+
+        .element-3{
+        filter: grayscale(1);
+        }
+
+        .element-4{
+        filter: invert(1);
+        }
+
+        .element-5{
+        filter: saturate(3);
+        }
+                                </textarea>
+                            </section>
+                            <section>
+                                <h4>Documentation supplémentaire</h4>
+                                <ul>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter" target="_blank">filter</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li class="properties__item">
+                        <h3 id="flexbox-layout">flexbox layout</h3>
+                        <div class="dropdown hidden">
+                            <section>
+                                <h4>Explication</h4>
+                                <p>En CSS, Flexbox (Flexible Box Layout) est un modèle de disposition qui permet de
+                                    créer des mises en page complexes et flexibles en alignant et en distribuant de
+                                    manière dynamique les éléments dans un conteneur, selon un axe principal (horizontal
+                                    ou vertical) et un axe transversal (perpendiculaire à l'axe principal). Cela permet
+                                    de créer des mises en page réactives et adaptatives avec un minimum de code CSS.</p>
+                                <p>Les principaux concepts de Flexbox incluent les éléments suivants :</p>
+                                <p>1. Conteneur Flex (Flex Container) : Un élément qui a été défini avec display: flex
+                                    ou display: inline-flex. Les éléments enfants de ce conteneur deviennent des
+                                    éléments flexibles, et le conteneur flex contrôle leur disposition.</p>
+                                <p>2. Axes Flexibles : Flexbox utilise deux axes : l'axe principal (main axis) et l'axe
+                                    transversal (cross axis). L'axe principal est déterminé par la propriété
+                                    flex-direction (par défaut, c'est l'axe horizontal), tandis que l'axe transversal
+                                    est perpendiculaire à l'axe principal.</p>
+                                <p>3. Éléments Flex (Flex Items) : Les enfants directs d'un conteneur flex deviennent
+                                    automatiquement des éléments flexibles. Leur disposition est contrôlée par les
+                                    propriétés telles que flex-grow, flex-shrink, et flex-basis.</p>
+                                <p>4. Distribution d'espace : Flexbox permet de distribuer l'espace disponible entre les
+                                    éléments flexibles et de les aligner selon les besoins. Cela se fait avec des
+                                    propriétés comme justify-content, align-items, align-content, align-self, etc.</p>
+                                <p>5. Ordre des Éléments : Flexbox permet de contrôler l'ordre d'affichage des éléments,
+                                    indépendamment de leur position dans le code HTML, à l'aide de la propriété order.
+                                </p>
+                                <p>En résumé, Flexbox est une puissante technique de mise en page qui simplifie la
+                                    création de mises en page réactives et flexibles en CSS, en offrant un contrôle
+                                    précis sur l'alignement, la distribution et l'ordre des éléments dans un conteneur.
+                                </p>
+                            </section>
+                            <section>
+                                <h4>Exemple</h4>
+                                <p>Essayez de rétrécir la fenêtre du navigateur pour voir ce qu'il se produit avec les
+                                    carrés bleus.</p>
+                                <div class="flexbox-exemple">
+                                    <div class="square">1</div>
+                                    <div class="square">2</div>
+                                    <div class="square">3</div>
+                                    <div class="square">4</div>
+                                    <div class="square">5</div>
+                                    <div class="square">6</div>
+                                </div>
+                            </section>
+                            <section>
+                                <h4>Le CSS</h4>
+                                <textarea name="flexbox">
+        .element{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-evenly;
+        }
+                                </textarea>
+                            </section>
+                            <section>
+                                <h4>Documentation supplémentaire</h4>
+                                <ul>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank">flexbox</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items" target="_blank">align-items</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-content" target="_blank">align-content</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction" target="_blank">flex-direction</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow" target="_blank">flex-flow</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap" target="_blank">flex-wrap</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content" target="_blank">justify-content</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li id="g" class="main-list__item">
+                <h2 class="lettre">G</h2>
+                <ul class="properties__container">
+                    <li class="properties__item">
+                        <h3 id="grid-layout">grid layout</h3>
+                        <div class="dropdown hidden">
+                            <section>
+                                <h4>Explication</h4>
+                                <p>En CSS, Grid Layout est une méthode de mise en page qui permet de créer des mises en
+                                    page complexes et adaptatives en alignant et en distribuant de manière dynamique les
+                                    éléments dans un conteneur bidimensionnel, composé de lignes et de colonnes. Avec
+                                    Grid Layout, vous pouvez diviser votre espace de mise en page en une grille de
+                                    lignes et de colonnes, puis positionner les éléments à l'intérieur de cette grille.
+                                </p>
+                                <p>Les principaux concepts de Grid Layout incluent :</p>
+                                <p>1. Conteneur de Grille (Grid Container) : Un élément qui a été défini avec display:
+                                    grid. Les enfants directs de ce conteneur deviennent des éléments de la grille, et
+                                    le conteneur de grille contrôle leur disposition.</p>
+                                <p>2. Lignes et Colonnes de la Grille (Grid Lines and Grid Columns) : La grille est
+                                    composée de lignes horizontales et de colonnes verticales. Vous pouvez spécifier le
+                                    nombre et la taille de ces lignes et colonnes en utilisant les propriétés
+                                    grid-template-rows et grid-template-columns.</p>
+                                <p>3. Cellules de la Grille (Grid Cells) : Les intersections des lignes et des colonnes
+                                    forment des cellules de la grille. Vous pouvez positionner les éléments à
+                                    l'intérieur de ces cellules en utilisant les propriétés grid-row et grid-column.</p>
+                                <p>4. Zone de la Grille (Grid Area) : Une zone de la grille est un ensemble de cellules
+                                    adjacentes. Vous pouvez nommer ces zones et les placer à l'aide de la propriété
+                                    grid-template-areas.</p>
+                                <p>5. Alignement et Distribution : Vous pouvez aligner et distribuer les éléments à
+                                    l'intérieur de la grille en utilisant les propriétés justify-items, align-items,
+                                    justify-content, align-content, etc.</p>
+                                <p>6. Superposition (Layering) : Vous pouvez également superposer des éléments dans la
+                                    grille en utilisant la propriété z-index.</p>
+                                <p>En résumé, Grid Layout est une méthode de mise en page puissante qui offre un
+                                    contrôle précis sur la disposition des éléments dans une grille bidimensionnelle.
+                                    Elle permet de créer des mises en page réactives et complexes tout en offrant une
+                                    syntaxe claire et concise.</p>
+                            </section>
+                            <section>
+                                <h4>Exemple</h4>
+                                <p>Essayez de rétrécir la fenêtre du navigateur pour voir ce qu'il se produit avec les
+                                    carrés bleus.</p>
+                                <div class="grid-layout">
+                                    <div class="square">1</div>
+                                    <div class="square">2</div>
+                                    <div class="square">3</div>
+                                    <div class="square">4</div>
+                                    <div class="square">5</div>
+                                    <div class="square">6</div>
+                                    <div class="square">7</div>
+                                    <div class="square">8</div>
+                                </div>
+                            </section>
+                            <section>
+                                <h4>Le CSS</h4>
+                                <textarea name="grid">
+        .element{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, auto);
+        }         
+
+        @media screen and (min-width: 768px){
+        .element{
+        grid-template-columns: repeat(3, auto);
+        }
+        }
+
+        @media screen and (min-width: 1024px){
+        .element{
+        grid-template-columns: repeat(4, auto);
+        }
+        }
+                                </textarea>
+                            </section>
+                            <section>
+                                <h4>Documentation supplémentaire</h4>
+                                <ul class="properties__link">
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout" target="_blank">grid layout</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid" target="_blank">grid</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-area" target="_blank">grid-area</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns" target="_blank">grid-auto-columns</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow" target="_blank">grid-auto-flow</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows" target="_blank">grid-auto-rows</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column" target="_blank">grid-column</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-end" target="_blank">grid-column-end</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-start" target="_blank">grid-column-start</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row" target="_blank">grid-row</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-end" target="_blank">grid-row-end</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-start" target="_blank">grid-row-start</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template" target="_blank">grid-template</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas" target="_blank">grid-template-areas</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns" target="_blank">grid-template-columns</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows" target="_blank">grid-template-rows</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 id="gradients">gradients</h3>
+                        <div class="dropdown hidden">
+                            <section class="properties__item gradients">
+                                <h4 class="gradients">linear gradients</h4>
+                                <section>
+                                    <h4>Explication</h4>
+                                    <p>linear-gradient en CSS est une fonction qui permet de créer un dégradé linéaire
+                                        entre deux ou plusieurs couleurs. Elle est souvent utilisée pour créer des
+                                        arrière-plans élégants et des effets visuels intéressants sur les éléments HTML.
+                                    </p>
+                                </section>
+                                <section>
+                                    <h4>Exemple</h4>
+                                    <div class="linear-gradient"></div>
+                                </section>
+                                <section>
+                                    <h4>Le CSS</h4>
+                                    <textarea name="linear-gradient">
+        .element{
+        background: linear-gradient(couleur-1, couleur-2);
+        }
+                                    </textarea>
+                                </section>
+                                <section>
+                                    <h4>Documentation supplémentaire</h4>
+                                    <ul>
+                                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient" target="_blank">linear gradient</a></li>
+                                    </ul>
+                                </section>
+                            </section>
+                            <section class="properties__item gradients">
+                                <h4 class="gradients">radial gradients</h4>
+                                <section>
+                                    <h4>Explication</h4>
+                                    <p>
+                                        La fonction radial-gradient en CSS est utilisée pour créer des dégradés radiaux,
+                                        qui se propagent à partir d'un point central vers l'extérieur dans toutes les
+                                        directions. Cela crée souvent des effets visuels circulaires ou rayonnants.</p>
+                                </section>
+                                <section>
+                                    <h4>Exemple</h4>
+                                    <div class="radial-gradient"></div>
+                                </section>
+                                <section>
+                                    <h4>Le CSS</h4>
+                                    <textarea name="radial-gradient" id="">
+        .element{
+            background: radial-gradient(couleur-1, couleur-2);
+        }
+                                    </textarea>
+                                </section>
+                                <section>
+                                    <h4>Documentation supplémentaire</h4>
+                                    <ul>
+                                        <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/gradient/radial-gradient" target="_blank">radial-gradient</a></li>
+                                    </ul>
+                                </section>
+                            </section>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li id="o" class="main-list__item">
+                <h2 class="lettre">O</h2>
+                <ul class="properties__container">
+                    <li class="properties__item">
+                        <h3 id="object-fit">object-fit</h3>
+                        <div class="dropdown hidden">
+                            <section>
+                                <h4>Explication</h4>
+                                <p>En CSS, la propriété object-fit contrôle comment une image ou une vidéo s'adapte à sa
+                                    boîte de contenu. Elle spécifie comment redimensionner et ajuster l'élément de
+                                    remplacement (comme une image ou une vidéo) pour s'adapter à l'espace alloué par son
+                                    conteneur.</p>
+                                <p>Les valeurs les plus couramment utilisées pour object-fit sont :</p>
+                                <p>1. fill : L'élément de remplacement est redimensionné pour remplir complètement la
+                                    boîte de contenu, en déformant potentiellement l'image d'origine pour s'adapter.</p>
+                                <p>2. contain : L'élément de remplacement est redimensionné pour s'adapter entièrement à
+                                    l'intérieur de la boîte de contenu tout en préservant ses proportions d'origine. Il
+                                    peut y avoir des espaces vides autour de l'image si les proportions de l'image ne
+                                    correspondent pas exactement à celles de la boîte de contenu.</p>
+                                <p>3. cover : L'élément de remplacement est redimensionné pour couvrir entièrement la
+                                    boîte de contenu, en ajustant éventuellement l'image d'origine pour qu'elle
+                                    remplisse l'espace sans déformer l'image, mais en pouvant couper une partie de
+                                    celle-ci si nécessaire.</p>
+                                <p>4. none : L'élément de remplacement est affiché à sa taille intrinsèque, et ne sera
+                                    ni étiré ni compressé pour s'adapter à la boîte de contenu. Cela peut entraîner le
+                                    débordement de l'élément de remplacement de la boîte de contenu.</p>
+                                <p>5. scale-down : L'élément de remplacement est redimensionné pour s'adapter
+                                    entièrement à l'intérieur de la boîte de contenu tout en préservant ses proportions
+                                    d'origine. Si cela nécessite une réduction de taille par rapport à none, l'élément
+                                    est redimensionné à la taille la plus petite.</p>
+                            </section>
+                            <section class="object-fit-exemple">
+                                <h4>Exemple</h4>
+                                <div class="object-fit-exemple">
+                                    <figure class="object-fit contain">
+                                        <figcaption>contain</figcaption>
+                                        <img src="https://picsum.photos/id/326/200/300" alt="">
+                                    </figure>
+
+                                    <figure class="object-fit cover">
+                                        <figcaption>cover</figcaption>
+                                        <img src="https://picsum.photos/id/326/200/300" alt="">
+                                    </figure>
+
+                                    <figure class="object-fit fill">
+                                        <figcaption>fill</figcaption>
+                                        <img src="https://picsum.photos/id/326/200/300" alt="">
+                                    </figure>
+
+                                    <figure class="object-fit none">
+                                        <figcaption>none</figcaption>
+                                        <img src="https://picsum.photos/id/326/200/300" alt="">
+                                    </figure>
+
+                                    <figure class="object-fit scale-down">
+                                        <figcaption>scale-down</figcaption>
+                                        <img src="https://picsum.photos/id/326/200/300" alt="">
+                                    </figure>
+                                </div>
+                            </section>
+                            <section>
+                                <h4>Le CSS</h4>
+                                <textarea name="object-fit">
+        img{
+        height: 200px:
+        width: 300px;
+        }
+
+        .fill img{
+        object-fit: fill;
+        }
+
+        .contain img{
+        object-fit: contain;
+        }
+
+        .cover img{
+        object-fit: cover;
+        }
+
+        .none img{
+        object-fit: none;
+        }
+
+        .scale-down img{
+        object-fit: scale-down;
+        }   
+                                </textarea>
+                            </section>
+                            <section>
+                                <h4>Documentation supplémentaire</h4>
+                                <ul>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit" target="_blank">object-fit</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li class="properties__item">
+                        <h3 id="opacity">opacity</h3>
+                        <div class="dropdown hidden">
+                            <section>
+                                <h4>Explication</h4>
+                                <p>En CSS, la propriété opacity est utilisée pour contrôler le degré de transparence
+                                    d'un élément HTML, comme une image, un texte ou un conteneur. Elle spécifie la
+                                    transparence de l'élément sur une échelle de 0 à 1, où 0 représente une transparence
+                                    totale (élément complètement invisible) et 1 représente une opacité totale (élément
+                                    entièrement visible).</p>
+                            </section>
+                            <section>
+                                <h4>Exemple</h4>
+                                <div class="opacity-exemple">
+                                    <figure class="opacity-10">
+                                        <figcaption>opacity 10%</figcaption>
+                                        <img src="https://picsum.photos/id/292/200/300" alt="">
+                                    </figure>
+                                    <figure class="opacity-25">
+                                        <figcaption>opacity 25%</figcaption>
+                                        <img src="https://picsum.photos/id/292/200/300" alt="">
+                                    </figure>
+                                    <figure class="opacity-50">
+                                        <figcaption>opacity 50%</figcaption>
+                                        <img src="https://picsum.photos/id/292/200/300" alt="">
+                                    </figure>
+                                    <figure class="opacity-75">
+                                        <figcaption>opacity 75%</figcaption>
+                                        <img src="https://picsum.photos/id/292/200/300" alt="">
+                                    </figure>
+                                </div>
+                            </section>
+                            <section>
+                                <h4>Le CSS</h4>
+                                <textarea name="opacity">
+        .opacity-10 img{
+        opacity: .1;
+        }
+
+        .opacity-25 img{
+        opacity: .25;
+        }
+
+        .opacity-50 img{
+        opacity: .5;
+        }
+
+        .opacity-75 img{
+        opacity: .75;
+        }
+                                </textarea>
+                            </section>
+                            <section>
+                                <h4>Documentation supplémentaire</h4>
+                                <ul>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/opacity" target="_blank">opacity</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li class="properties__item">
+                        <h3 id="outline-offset">outline-offset</h3>
+                        <div class="dropdown hidden">
+                            <section>
+                                <h4>Explication</h4>
+                                <p>La propriété CSS outline-offset est utilisée pour spécifier la distance entre la
+                                    bordure (outline) d'un élément et son contour (border box). Cela signifie qu'elle
+                                    permet de contrôler l'espace entre l'outline d'un élément et son contenu ou son
+                                    bord.</p>
+                                <p>Par défaut, l'outline d'un élément est directement adjacent à son bord. Cependant, en
+                                    utilisant outline-offset, vous pouvez décaler cet outline à l'intérieur ou à
+                                    l'extérieur de l'élément.</p>
+                            </section>
+                            <section>
+                                <h4>Exemple</h4>
+                                <div class="outline-offset-exemple">
+                                    <div class="outline-offset _1">
+                                        <p>outline-offset exemple 1</p>
+                                    </div>
+                                    <div class="outline-offset _2">
+                                        <p>outline-offset exemple 2</p>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <h4>Le CSS</h4>
+                                <textarea name="outline-offset">
+        .element-1{
+        border: .2rem solid var(--couleur-quatre);
+        outline: .2rem solid var(--couleur-un);
+        outline-offset: .5rem;
+        }
+
+        .element-2{
+        border: .2rem solid var(--couleur-quatre);
+        outline: .2rem dashed var(--couleur-un);
+        outline-offset: 1rem;
+        }
+                                </textarea>
+                            </section>
+                            <section>
+                                <h4>Documentation supplémentaire</h4>
+                                <ul>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/outline-offset" target="_blank">outline-offset</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li class="properties__item">
+                        <h3 id="overflow">overflow</h3>
+                        <div class="dropdown hidden">
+                            <section>
+                                <h4>Explication</h4>
+                                <p>En CSS, la propriété overflow est utilisée pour contrôler le comportement du contenu
+                                    qui dépasse les dimensions d'un élément définies par sa largeur et sa hauteur.</p>
+                                <p>Voici les valeurs les plus couramment utilisées pour la propriété overflow :</p>
+                                <p>1. visible : C'est la valeur par défaut. Le contenu qui dépasse les dimensions de
+                                    l'élément sera visible à l'extérieur de celui-ci, dépassant potentiellement les
+                                    limites de son conteneur parent.</p>
+                                <p>2. hidden : Tout le contenu qui dépasse les dimensions de l'élément sera masqué, et
+                                    aucune barre de défilement ne sera affichée. Cette valeur est utile lorsque vous
+                                    souhaitez masquer le contenu excédentaire.</p>
+                                <p>3. scroll : Une barre de défilement sera toujours affichée, même si le contenu ne
+                                    dépasse pas les dimensions de l'élément. Cela permet aux utilisateurs de faire
+                                    défiler le contenu même s'il est entièrement visible.</p>
+                                <p>4. auto : Une barre de défilement sera affichée uniquement lorsque le contenu dépasse
+                                    les dimensions de l'élément. Si le contenu est entièrement visible, aucune barre de
+                                    défilement ne sera affichée.</p>
+                                <p>5. inherit : La valeur de la propriété overflow est héritée du conteneur parent.</p>
+                            </section>
+                            <section>
+                                <h4>Exemple</h4>
+                                <div class="overflow-exemple">
+                                    <div>
+                                        <span>overflow visible</span>
+                                        <p class="overflow-visible">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                                            enim ad minim veniam.</p>
+                                    </div>
+                                    <div>
+                                        <span>overflow scroll</span>
+                                        <p class="overflow-scroll">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                                            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                                            anim id est laborum.</p>
+                                    </div>
+                                    <div>
+                                        <span>overflow hidden</span>
+                                        <p class="overflow-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                                            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                                            anim id est laborum.</p>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <h4>Le CSS</h4>
+                                <textarea name="overflow">
+        .overflow-hidden{
+        overflow: hidden;
+        }
+
+        .overflow-scroll{
+        overflow: scroll;
+        }
+
+        .overflow-visible{
+        overflow: visible;
+        }
+                                </textarea>
+                            </section>
+                            <section>
+                                <h4>Documentation supplémentaire</h4>
+                                <ul>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow" target="_blank">overflow</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-anchor" target="_blank">overflow-anchor</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-block" target="_blank">overflow-block</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-clip-margin" target="_blank">overflow-clip-margin</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-inline" target="_blank">overflow-inline</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap" target="_blank">overflow-wrap</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-x" target="_blank">overflow-x</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-y" target="_blank">overflow-y</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li id="t" class="main-list__item">
+                <h2 class="lettre">T</h2>
+                <ul class="properties__container">
+                    <li class="properties__item">
+                        <h3 id="transform">transform</h3>
+                        <div class="dropdown transform__container hidden">
+                            <section>
+                                <h4>Explication</h4>
+                                <p>En CSS, la propriété transform est utilisée pour appliquer des transformations
+                                    graphiques à un élément HTML. Ces transformations peuvent inclure des translations
+                                    (déplacements), des rotations, des mises à l'échelle, des inclinaisons (skewing), et
+                                    bien d'autres effets visuels. La propriété transform est une manière puissante de
+                                    modifier l'apparence et la disposition des éléments sans affecter le flux normal du
+                                    document HTML.</p>
+                            </section>
+                            <section>
+                                <h4>Exemple</h4>
+                                <div class="transform-exemple">
+                                    <div class="transform none">none</div>
+                                    <div class="transform rotate-1">rotate 45deg</div>
+                                    <div class="transform rotate-2">rotate 90deg</div>
+                                    <div class="transform scale">scale 2.1</div>
+                                    <div class="transform skew">skew 30deg, 10deg</div>
+                                    <div class="transform translate">translate 100px, -50px</div>
+                                </div>
+                            </section>
+                            <section>
+                                <h4>Le CSS</h4>
+                                <textarea name="transform">
+        .transform.none{
+        transform: none;
+        }
+
+        .transform.rotate-1{
+        transform: rotate(45deg);
+        }
+
+        .transform.rotate-2{
+        transform: rotate(90deg);
+        }
+
+        .transform.scale{
+        transform: scale(2.1);
+        }
+
+        .transform.skew{
+        transform: skew(30deg, 10deg);
+        }
+
+        .transform.translate{
+        transform: translate(100px, -50px);
+        }
+                                </textarea>
+                            </section>
+                            <section>
+                                <h4>Documentation supplémentaire</h4>
+                                <ul>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform" target="_blank">transform</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-box" target="_blank">transform-box</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin" target="_blank">transform-origin</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style" target="_blank">transform-style</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                    <li class="properties__item">
+                        <h3 id="transition">transition</h3>
+                        <div class="dropdown hidden">
+                            <section>
+                                <h4>Explication</h4>
+                                <p>En CSS, la propriété transition est utilisée pour contrôler l'animation fluide des
+                                    changements de style sur un élément HTML. Elle permet de spécifier une transition
+                                    progressive entre les valeurs de propriétés CSS lorsque ces valeurs changent au fil
+                                    du temps, créant ainsi des effets d'animation élégants et interactifs.</p>
+                                <p>La propriété transition prend plusieurs valeurs, mais les plus importantes sont :</p>
+                                <p>1. Propriétés concernées : Il s'agit de la ou des propriétés CSS que vous souhaitez
+                                    animer. Vous pouvez spécifier une propriété unique ou une liste séparée par des
+                                    virgules de plusieurs propriétés à animer.</p>
+                                <p>2. Durée : C'est la durée de la transition, exprimée en secondes (s) ou en
+                                    millisecondes (ms).</p>
+                                <p>3. Fonction de temporisation (timing function) : Elle contrôle la progression de la
+                                    transition sur sa durée. Les valeurs courantes incluent ease (la transition commence
+                                    lentement, puis accélère), linear (la transition se déroule à une vitesse
+                                    constante), ease-in (la transition commence lentement), ease-out (la transition se
+                                    termine lentement), ease-in-out (la transition commence et se termine lentement) et
+                                    bien d'autres.</p>
+                                <p>4. Décalage (delay) : Il s'agit d'un délai facultatif avant le début de la
+                                    transition, exprimé en secondes (s) ou en millisecondes (ms).</p>
+                            </section>
+                            <section>
+                                <h4>Exemple</h4>
+                                <div class="transition-exemple">
+                                    <div class="transition exemple-1">
+                                        <p>Survolez pour voir l'effet.</p>
+                                        <p>transition: width 1s</p>
+                                    </div>
+                                    <div class="transition exemple-2">
+                                        <p>Survolez pour voir l'effet.</p>
+                                        <p>transition: width 3s</p>
+                                    </div>
+                                    <div class="transition exemple-3">
+                                        <p>Survolez pour voir l'effet.</p>
+                                        <p>transition: width 6s</p>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <h4>Le CSS</h4>
+                                <textarea name="transition">
+        .exemple-1{
+        transition: width 1s;
+        }
+
+        .exemple-2{
+        transition: width 3s;
+        }
+
+        .exemple-3{
+        transition: width 6s;
+        }
+
+        exemples:hover{
+        width: 100%;
+        }
+                                </textarea>
+                            </section>
+                            <section>
+                                <h4>Documentation supplémentaire</h4>
+                                <ul>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition" target="_blank">transtition</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-behavior" target="_blank">transition-behavior</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-delay" target="_blank">transition-delay</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration" target="_blank">transition-duration</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property" target="_blank">transition-property</a></li>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function" target="_blank">transition-timing-function</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li id="w" class="main-list__item">
+                <h2 class="lettre">W</h2>
+                <ul class="properties__container">
+                    <li class="properties__item">
+                        <h3 id="writing-mode">writing-mode</h3>
+                        <div class="dropdown writing-mode__container hidden">
+                            <section>
+                                <h4>Explication</h4>
+                                <p>En CSS, la propriété writing-mode contrôle la direction dans laquelle le texte est
+                                    affiché dans un élément. Cette propriété est principalement utilisée pour gérer
+                                    l'écriture verticale ou des langues qui s'écrivent dans une direction différente de
+                                    celle de l'écriture horizontale standard (de gauche à droite).</p>
+                                <p>Les valeurs les plus courantes pour la propriété writing-mode sont :</p>
+                                <p>1. horizontal-tb : C'est la valeur par défaut. Le texte est affiché horizontalement
+                                    de gauche à droite, puis de haut en bas. C'est le mode d'écriture standard pour la
+                                    plupart des langues, y compris l'anglais.</p>
+                                <p>2. vertical-rl : Le texte est affiché verticalement de haut en bas, de droite à
+                                    gauche. Ceci est couramment utilisé pour l'écriture verticale dans les langues comme
+                                    le japonais, le chinois ou le coréen.</p>
+                                <p>3. vertical-lr : Le texte est affiché verticalement de haut en bas, de gauche à
+                                    droite. Ceci est utilisé dans certaines langues, mais moins fréquemment que
+                                    vertical-rl.</p>
+                                <p>4. sideways-rl : Le texte est affiché horizontalement, mais tourné de 90 degrés dans
+                                    le sens des aiguilles d'une montre, de sorte que chaque ligne soit lue de haut en
+                                    bas et de droite à gauche. Cette valeur est parfois utilisée pour des éléments
+                                    spécifiques où le texte doit être affiché verticalement, mais sans utiliser un mode
+                                    d'écriture vertical complet.</p>
+                                <p>5. sideways-lr : Le texte est affiché horizontalement, mais tourné de 90 degrés dans
+                                    le sens inverse des aiguilles d'une montre, de sorte que chaque ligne soit lue de
+                                    haut en bas et de gauche à droite. Cette valeur est similaire à sideways-rl, mais le
+                                    texte est tourné dans l'autre sens.</p>
+                            </section>
+                            <section>
+                                <h4>Exemple</h4>
+                                <div class="writing-mode-exemple">
+                                    <div class="writing-mode horizontal-tb">horizontal-tb</div>
+                                    <div class="writing-mode vertical-lr">vertical-lr</div>
+                                    <div class="writing-mode vertical-rl">vertical-rl</div>
+                                </div>
+                            </section>
+                            <section>
+                                <h4>Le CSS</h4>
+                                <textarea name="writing-mode">
+        .horizontal-tb{
+        writing-mode: horizontal-tb;
+        }
+
+        .vertical-lr{
+        writing-mode: vertical-lr;
+        }
+
+        .vertical-rl{
+        writing-mode: vertical-rl;
+        }
+                                </textarea>
+                            </section>
+                            <section>
+                                <h4>Documentation supplémentaire</h4>
+                                <ul>
+                                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode" target="_blank">writing-mode</a></li>
+                                </ul>
+                            </section>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <p>Alexis Turcotte</p>
+        <p>PMI, Cours de réalisation web</p>
+        <p>AGT_TL-01, 22 mai 2024</p>
+    </footer>
+<script src="/AGT_tl-01_turcotte-alexis.59712999.js"></script></body>
+</html>

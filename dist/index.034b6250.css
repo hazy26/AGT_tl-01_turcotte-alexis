@@ -1,0 +1,870 @@
+@import "https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+  font-family: Nunito Sans, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  flex-direction: column;
+  display: flex;
+  position: relative;
+}
+
+body header {
+  z-index: 100;
+  background-color: #131515;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5rem;
+  height: 120px;
+  padding: 2rem;
+  transition: all .8s;
+  display: flex;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 6px #0006;
+}
+
+body header .minimize {
+  opacity: .9;
+  height: 55px;
+  padding: .7rem 2rem;
+}
+
+body header h1 a {
+  color: #fffafb;
+  letter-spacing: 2px;
+  z-index: 1;
+  font-family: Lora, serif;
+  font-size: 1.2rem;
+  font-weight: 200;
+  text-decoration: none;
+}
+
+@media screen and (width >= 1024px) {
+  body header h1 a {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (width >= 1280px) {
+  body header h1 a {
+    font-size: 2rem;
+  }
+}
+
+body header h1 a:hover {
+  color: var(--couleur-cinq);
+  border-bottom: .1rem solid #50b2c0;
+}
+
+body header nav {
+  z-index: -1;
+  background-color: #131515;
+  border-radius: 0 0 1rem 1rem;
+  flex-direction: column;
+  width: fit-content;
+  height: 80vh;
+  padding: 7.5rem 6rem;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: scroll;
+}
+
+body header nav ul.first-level {
+  flex-flow: column wrap;
+  justify-content: center;
+  align-self: center;
+  gap: 2rem;
+  font-size: 1.5rem;
+  display: flex;
+}
+
+@media screen and (width >= 1024px) {
+  body header nav ul.first-level {
+    gap: 3rem;
+  }
+}
+
+body header nav ul.first-level a {
+  color: #fffafb;
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+@media screen and (width >= 1024px) {
+  body header nav ul.first-level a {
+    font-size: 2rem;
+  }
+}
+
+body header nav ul.first-level a:hover {
+  color: #50b2c0;
+}
+
+body header .menu__icon {
+  cursor: pointer;
+  background-color: #fffafb;
+  border-radius: .2rem;
+  align-items: center;
+  padding: .1rem .3rem;
+  transition: all .8s;
+  display: flex;
+  transform: scale(.9);
+}
+
+body header .open {
+  filter: brightness(1.2);
+  background-color: #50b2c0;
+  transform: scale(1)rotate(180deg);
+}
+
+body header .menu__icon:hover {
+  background-color: #50b2c0;
+}
+
+body header .menu__icon:active {
+  filter: brightness(1.4);
+}
+
+body main {
+  background-color: #fddec9;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 2rem;
+  display: flex;
+  box-shadow: inset 0 0 6px 4px #00000080;
+}
+
+@media screen and (width >= 768px) {
+  body main {
+    padding: 4rem;
+  }
+}
+
+body main .btn__retour-haut {
+  cursor: pointer;
+  z-index: 1;
+  background-color: #fffafb;
+  border: .2rem solid #50b2c0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  padding: .95rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 2rem;
+  box-shadow: 0 0 8px 4px #0003;
+}
+
+body main .btn__retour-haut:hover {
+  background-color: #50b2c0;
+  border: .2rem solid #50b2c0;
+}
+
+body main .btn__retour-haut:active {
+  box-shadow: inset 0 0 8px 4px #0003;
+}
+
+body main .css3-list__main-container {
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item {
+  border: .2rem solid #131515;
+  border-radius: .3rem;
+  box-shadow: 0 0 6px 2px #0000004d;
+}
+
+body main .css3-list__main-container .main-list__item h2 {
+  color: #fffafb;
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #131515;
+  padding: 1rem;
+  font-family: Lora, serif;
+  font-size: 1.6rem;
+}
+
+@media screen and (width >= 1024px) {
+  body main .css3-list__main-container .main-list__item h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (width >= 1280px) {
+  body main .css3-list__main-container .main-list__item h2 {
+    font-size: 2.2rem;
+  }
+}
+
+body main .css3-list__main-container .main-list__item .properties__container {
+  border-radius: 0 0 .3rem .3rem;
+  flex-direction: column;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container h3 {
+  color: var(--couleur-un);
+  filter: brightness(1.1);
+  background-color: #50b2c0;
+  border-bottom: .1rem solid #131515;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  display: flex;
+  position: relative;
+}
+
+@media screen and (width >= 1024px) {
+  body main .css3-list__main-container .main-list__item .properties__container h3 {
+    background-position: right 2rem bottom .9rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (width >= 1280px) {
+  body main .css3-list__main-container .main-list__item .properties__container h3 {
+    background-position: right 2rem bottom 1.1rem;
+    font-size: 2.2rem;
+  }
+}
+
+body main .css3-list__main-container .main-list__item .properties__container h3 img {
+  width: 2rem;
+  transition: transform .4s;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container h3 img .open-arrow {
+  transform: rotate(180deg);
+}
+
+body main .css3-list__main-container .main-list__item .properties__container :last-child h3 {
+  border-bottom: none;
+  border-radius: 0 0 .1rem .1rem;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container h3:hover {
+  cursor: pointer;
+  filter: brightness();
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .dropdown {
+  background-color: #fffafb;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem 2rem 6rem;
+  display: flex;
+  box-shadow: inset 0 0 6px 2px #0003;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .dropdown h4 {
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+@media screen and (width >= 1024px) {
+  body main .css3-list__main-container .main-list__item .properties__container .dropdown h4 {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (width >= 1280px) {
+  body main .css3-list__main-container .main-list__item .properties__container .dropdown h4 {
+    font-size: 1.8rem;
+  }
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .dropdown p {
+  color: #131515;
+  padding-bottom: 1rem;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .dropdown textarea {
+  border: none;
+  border-radius: 2rem;
+  width: 100%;
+  height: 300px;
+  padding: 2rem;
+  box-shadow: 2px 2px 2px #0006;
+}
+
+@media screen and (width >= 768px) {
+  body main .css3-list__main-container .main-list__item .properties__container .dropdown textarea {
+    width: 85%;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  body main .css3-list__main-container .main-list__item .properties__container .dropdown textarea {
+    width: 75%;
+  }
+}
+
+@media screen and (width >= 1280px) {
+  body main .css3-list__main-container .main-list__item .properties__container .dropdown textarea {
+    width: 60%;
+  }
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .dropdown ul {
+  flex-direction: column;
+  gap: .5rem;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .animation__container section.animation__exemple {
+  height: 380px;
+  position: relative;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .animation__container div.animation__exemple {
+  border-radius: .5rem;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  font-size: .8rem;
+  animation-name: animation__exemple;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  display: flex;
+  position: absolute;
+}
+
+@media screen and (width >= 768px) {
+  body main .css3-list__main-container .main-list__item .properties__container .animation__container div.animation__exemple {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@keyframes animation__exemple {
+  0% {
+    background-color: var(--couleur-un);
+    color: var(--couleur-deux);
+    top: 0;
+    left: 0;
+  }
+
+  25% {
+    background-color: var(--couleur-quatre);
+    color: var(--couleur-un);
+    top: 0;
+    left: 140px;
+  }
+
+  50% {
+    background-color: var(--couleur-cinq);
+    color: var(--couleur-un);
+    top: 240px;
+    left: 140px;
+  }
+
+  75% {
+    background-color: var(--couleur-trois);
+    color: var(--couleur-un);
+    top: 240px;
+    left: 0;
+  }
+
+  100% {
+    background-color: var(--couleur-un);
+    color: var(--couleur-deux);
+    top: 0;
+    left: 0;
+  }
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .backface-visibility__container div.backface-visibility {
+  position: relative;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .backface-visibility__container div.backface-visibility-exemple {
+  flex-wrap: wrap;
+  gap: 2rem;
+  height: 360px;
+  display: flex;
+}
+
+@media screen and (width >= 640px) {
+  body main .css3-list__main-container .main-list__item .properties__container .backface-visibility__container div.backface-visibility-exemple {
+    height: 180px;
+  }
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .backface-visibility__container .frontface-1, body main .css3-list__main-container .main-list__item .properties__container .backface-visibility__container .frontface-2 {
+  background-color: var(--couleur-cinq);
+  border-radius: .3rem;
+  padding: 2rem;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .backface-visibility__container .backface {
+  background-color: var(--couleur-quatre);
+  border-radius: .3rem;
+  padding: 2rem;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .backface-visibility__container .frontface-1 {
+  opacity: .7;
+  z-index: 1;
+  position: absolute;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .backface-visibility__container .backface.__visible {
+  backface-visibility: visible;
+  position: absolute;
+  left: 1rem;
+  transform: rotateY(180deg);
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .backface-visibility__container .frontface-2 {
+  opacity: .7;
+  z-index: 1;
+  position: absolute;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .backface-visibility__container .backface.__hidden {
+  backface-visibility: hidden;
+  position: absolute;
+  left: 1rem;
+  transform: rotateY(180deg);
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .border-radius__container div.border-radius-exemple {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .border-radius__container div.border-radius {
+  background-color: var(--couleur-cinq);
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100px;
+  padding: 1.5rem;
+  font-size: 1rem;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .border-radius__container div.border-radius.exemple-1 {
+  border-radius: 1rem;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .border-radius__container div.border-radius.exemple-2 {
+  border-radius: 2rem 4rem 6rem 0;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .border-image__container h4.border-image {
+  border: 2rem solid #0000;
+  border-image: url("https://cdn.pixabay.com/photo/2020/02/06/01/52/frame-4822807_1280.png") 100 round;
+  justify-content: center;
+  padding: 1rem;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .columns__container .columns__exemple {
+  columns: 2;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .columns__container .columns__exemple h4 {
+  column-span: all;
+  text-align: center;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .filter__container .filter__exemples {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .filter__container figcaption {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .filter__container .filter__exemples img {
+  border-radius: 1rem;
+  box-shadow: 4px 4px 6px #00000080;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .filter__container .filter-1 {
+  filter: brightness(.5);
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .filter__container .filter-2 {
+  filter: contrast(1.5);
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .filter__container .filter-3 {
+  filter: grayscale();
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .filter__container .filter-4 img {
+  filter: invert();
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .filter__container .filter-5 {
+  filter: saturate(3);
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .gradients__container section.gradients {
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 6rem;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .gradients__container h4.gradients {
+  font-size: 1.4rem;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .gradients__container div.linear-gradient {
+  background: linear-gradient(var(--couleur-trois), var(--couleur-cinq));
+  width: 100%;
+  height: 200px;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .gradients__container div.radial-gradient {
+  background: radial-gradient(var(--couleur-trois), var(--couleur-cinq));
+  width: 100%;
+  height: 200px;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .grid-layout__container div.flexbox-exemple {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .grid-layout__container .square, body main .css3-list__main-container .main-list__item .properties__container .grid-layout__container .square {
+  background-color: var(--couleur-cinq);
+  border-radius: .2rem;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .grid-layout__container .grid-layout {
+  grid-template-columns: repeat(2, auto);
+  gap: 1rem;
+  display: grid;
+}
+
+@media screen and (width >= 768px) {
+  body main .css3-list__main-container .main-list__item .properties__container .grid-layout__container .grid-layout {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media screen and (width >= 1024px) {
+  body main .css3-list__main-container .main-list__item .properties__container .grid-layout__container .grid-layout {
+    grid-template-columns: repeat(4, auto);
+  }
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .object-fit__container div.object-fit-exemple {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .object-fit__container .object-fit img {
+  width: 300px;
+  height: 200px;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .object-fit__container section.object-fit-exemple {
+  height: fit-content;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .object-fit__container .fill img {
+  object-fit: fill;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .object-fit__container .contain img {
+  object-fit: contain;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .object-fit__container .cover img {
+  object-fit: cover;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .object-fit__container .none img {
+  object-fit: none;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .object-fit__container .scale-down img {
+  object-fit: scale-down;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .opacity__container div.opacity-exemple {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .opacity__container .opacity-10 img {
+  opacity: .1;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .opacity__container .opacity-25 img {
+  opacity: .25;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .opacity__container .opacity-50 img {
+  opacity: .5;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .opacity__container .opacity-75 img {
+  opacity: .75;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .outline__offset div.outline-offset-exemple {
+  flex-direction: column;
+  gap: 4rem;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .outline__offset .outline-offset {
+  background-color: var(--couleur-cinq);
+  justify-content: center;
+  padding: 1rem;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .outline__offset .outline-offset._1 {
+  border: .2rem solid var(--couleur-quatre);
+  outline: .2rem solid var(--couleur-un);
+  outline-offset: .5rem;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .outline__offset .outline-offset._2 {
+  border: .2rem solid var(--couleur-quatre);
+  outline: .2rem dashed var(--couleur-un);
+  outline-offset: 1rem;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .overflow__container div.overflow-exemple {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .overflow__container div.overflow-exemple div {
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .overflow__container div.overflow-exemple p {
+  border: .2rem solid var(--couleur-un);
+  border-radius: .2rem;
+  width: 200px;
+  height: 100px;
+  padding: .5rem;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .overflow__container .overflow-hidden {
+  overflow: hidden;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .overflow__container .overflow-scroll {
+  overflow: scroll;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .overflow__container .overflow-visible {
+  overflow: visible;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .transform__container div.transform-exemple {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .transform__container div.transform {
+  background-color: #50b2c0;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 100px;
+  padding: .5rem;
+  font-size: 1rem;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .transform__container .transform.none {
+  transform: none;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .transform__container .transform.rotate-1 {
+  transform: rotate(45deg);
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .transform__container .transform.rotate-2 {
+  transform: rotate(90deg);
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .transform__container .transform.scale {
+  transform: scale(2.1);
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .transform__container .transform.skew {
+  transform: skew(30deg, 10deg);
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .transform__container .transform.translate {
+  transform: translate(100px, -50px);
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition-exemple {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition {
+  background-color: var(--couleur-cinq);
+  border-radius: .5rem;
+  width: 220px;
+  padding: 1.5rem;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition p {
+  width: 180px;
+  font-size: .9rem;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition.exemple-1 {
+  transition: width 1s;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition.exemple-2 {
+  transition: width 3s;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition.exemple-3 {
+  transition: width 6s;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition.exemple-1:hover, body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition.exemple-2:hover, body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition.exemple-3:hover {
+  width: 100%;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .writing-mode__container div.writing-mode-exemple {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .writing-mode__container .writing-mode {
+  background-color: #50b2c0;
+  border-radius: .5rem;
+  width: 60%;
+  padding: 2rem;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .writing-mode__container .writing-mode.horizontal-tb {
+  writing-mode: horizontal-tb;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .writing-mode__container .writing-mode.vertical-lr {
+  writing-mode: vertical-lr;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .writing-mode__container .writing-mode.vertical-rl {
+  writing-mode: vertical-rl;
+}
+
+body footer {
+  color: #fffafb;
+  letter-spacing: 1px;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #131515;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  display: flex;
+  box-shadow: 0 0 6px 2px #0006;
+}
+
+body footer p {
+  color: #fffafb;
+  padding: .3rem;
+}
+
+@media screen and (width >= 768px) {
+  body footer {
+    padding: 4rem;
+  }
+}
+
+body ul {
+  list-style: none;
+}
+
+@media screen and (width >= 1024px) {
+  body p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (width >= 1280px) {
+  body p {
+    font-size: 1.3rem;
+  }
+}
+
+body .hidden {
+  display: none !important;
+}
+
+@media screen and (width >= 1024px) {
+  .level-2__link {
+    font-size: 1.4rem;
+  }
+}
+/*# sourceMappingURL=index.034b6250.css.map */

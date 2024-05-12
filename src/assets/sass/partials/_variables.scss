@@ -1,0 +1,16 @@
+$small-size: 640px;
+$medium-size: 768px;
+$large-size: 1024px;
+$x-large-size: 1280px;
+
+$small-up: "(min-width: #{$small-size})";
+$medium-up: "(min-width: #{$medium-size})";
+$large-up: "(min-width: #{$large-size})";
+$x-large-up: "(min-width: #{$x-large-size})";
+
+$color-1: #131515;
+$color-2: #FFFAFB;
+$color-3: #FDDEC9;
+$color-4: #FAAA8D;
+$color-5: #50B2C0;
+$nunito: "Nunito Sans", sans-serif;

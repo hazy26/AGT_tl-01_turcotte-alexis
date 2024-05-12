@@ -1,21 +1,7 @@
+@use 'partials/variables' as var;
+@use 'header';
+@use 'footer';
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-
-$small-size: 640px;
-$medium-size: 768px;
-$large-size: 1024px;
-$x-large-size: 1280px;
-
-$small-up: "(min-width: #{$small-size})";
-$medium-up: "(min-width: #{$medium-size})";
-$large-up: "(min-width: #{$large-size})";
-$x-large-up: "(min-width: #{$x-large-size})";
-
-$color-1: #131515;
-$color-2: #FFFAFB;
-$color-3: #FDDEC9;
-$color-4: #FAAA8D;
-$color-5: #50B2C0;
-$nunito: "Nunito Sans", sans-serif;
 
 *{
     box-sizing: border-box;
@@ -24,7 +10,7 @@ $nunito: "Nunito Sans", sans-serif;
 }
 
 :root{
-    font-family: $nunito;
+    font-family: var.$nunito;
     font-size: 16px;
     scroll-behavior: smooth;
     scroll-padding-top: 9rem;
@@ -35,134 +21,21 @@ body{
     flex-direction: column;
     position: relative;
 
-    header{
-        align-items: center;
-        background-color: $color-1;
-        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .4);
-        display: flex;
-        gap: .5rem;
-        height: 120px;
-        justify-content: space-between;
-        padding: 2rem;
-        position: sticky;
-        top: 0;
-        transition: .8s;
-        z-index: 100;
-
-        .minimize{
-            height: 55px;
-            padding: .7rem 2rem;
-            opacity: .9;
-        }
-
-        h1 a{
-            color: $color-2;
-            font-family: "Lora", serif;
-            font-size: 1.2rem;
-            font-weight: 200;
-            letter-spacing: 2px;
-            text-decoration: none;
-            z-index: 1;
-
-            @media screen and #{$large-up} {
-                font-size: 1.8rem;
-            }
-
-            @media screen and #{$x-large-up} {
-                font-size: 2rem;
-            }
-        }
-        
-        h1 a:hover{
-            border-bottom: .1rem solid $color-5;
-            color: var(--couleur-cinq);
-        }
-
-        nav{
-            background-color: $color-1;
-            border-radius: 0 0 1rem 1rem;
-            display: flex;
-            flex-direction: column;
-            height: 80vh;
-            overflow: scroll;
-            padding: 7.5rem 6rem;
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: fit-content;
-            z-index: -1;
-
-
-            ul.first-level{
-                align-self: center;
-                display: flex;
-                flex-flow: column wrap;
-                font-size: 1.5rem;
-                gap: 2rem;
-                justify-content: center;
-                
-                @media screen and #{$large-up} {
-                    gap: 3rem;
-                }
-
-                a{
-                    color: $color-2;
-                    font-size: 1.2rem;
-                    font-weight: 200;
-
-                    @media screen and #{$large-up} {
-                        font-size: 2rem;
-                    }
-                }
-                
-                a:hover{
-                    color: $color-5;
-                }
-            }
-        }
-
-        .menu__icon{
-            align-items: center;
-            background-color: $color-2;
-            border-radius: .2rem;
-            cursor: pointer;
-            display: flex;
-            padding: .1rem .3rem;
-            transition: .8s;
-            transform: scale(.9);
-        }
-
-        .open{
-            background-color: $color-5;
-            filter: brightness(1.2);
-            transform: scale(1) rotate(180deg);
-        }
-        
-        .menu__icon:hover{
-            background-color: $color-5;
-        
-        }
-        
-        .menu__icon:active{
-            filter: brightness(1.4);
-        }
-    }
-
     main{
-        background-color: $color-3;
+        background-color: var.$color-3;
         box-shadow: inset 0 0 6px 4px rgba(0, 0, 0, .5);
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding: 4rem 2rem;
 
-        @media screen and #{$medium-up} {
+        @media screen and #{var.$medium-up} {
             padding: 4rem;
         }
 
         .btn__retour-haut{
-            background-color: $color-2;
-            border: .2rem solid $color-5;
+            background-color: var.$color-2;
+            border: .2rem solid var.$color-5;
             border-radius: 50%;
             bottom: 3rem;
             box-shadow: 0 0 8px 4px rgba(0, 0, 0, 20%);
@@ -176,8 +49,8 @@ body{
         }
 
         .btn__retour-haut:hover{
-            background-color: $color-5;
-            border: .2rem solid $color-5;
+            background-color: var.$color-5;
+            border: .2rem solid var.$color-5;
         }
         
         .btn__retour-haut:active{
@@ -189,28 +62,28 @@ body{
             flex-direction: column;
             gap: 2rem;
             margin: 0 auto;
-            max-width: 1240px;
+            max-width: 1024px;
             width: 100%;
 
             .main-list__item{
-                border: .2rem solid $color-1;
+                border: .2rem solid var.$color-1;
                 border-radius: .3rem;
                 box-shadow: 0 0 6px 2px rgb(0, 0, 0, .3);
 
                 h2{
-                    background-color: $color-1;
-                    color: $color-2;
+                    background-color: var.$color-1;
+                    color: var.$color-2;
                     font-family: "Lora", serif;
                     font-size: 1.6rem;
                     padding: 1rem;
                     text-align: center;
                     user-select: none;
 
-                    @media screen and #{$large-up} {
+                    @media screen and #{var.$large-up} {
                         font-size: 2rem;
                     }
 
-                    @media screen and #{$x-large-up} {
+                    @media screen and #{var.$x-large-up} {
                         font-size: 2.2rem;
                     }
                 }
@@ -221,8 +94,8 @@ body{
                     flex-direction: column;
 
                     h3{
-                        background-color: $color-5;
-                        border-bottom: .1rem solid $color-1;
+                        background-color: var.$color-5;
+                        border-bottom: .1rem solid var.$color-1;
                         color: var(--couleur-un);
                         display: flex;
                         flex-direction: row;
@@ -233,12 +106,12 @@ body{
                         padding: 1rem 2rem;
                         position: relative;
 
-                        @media screen and #{$large-up} {
+                        @media screen and #{var.$large-up} {
                             font-size: 1.8rem;
                             background-position: bottom .9rem right 2rem;
                         }
 
-                        @media screen and #{$x-large-up} {
+                        @media screen and #{var.$x-large-up} {
                             background-position: bottom 1.1rem right 2rem;
                             font-size: 2.2rem;
                         }
@@ -264,7 +137,7 @@ body{
                     }
             
                     .dropdown{
-                        background-color: $color-2;
+                        background-color: var.$color-2;
                         box-shadow: inset 0 0 6px 2px rgba(0, 0, 0, .2);
                         display: flex;
                         flex-direction: column;
@@ -275,17 +148,17 @@ body{
                             font-size: 1.2rem;
                             padding-bottom: 1rem;
 
-                            @media screen and #{$large-up} {
+                            @media screen and #{var.$large-up} {
                                 font-size: 1.4rem;
                             }
 
-                            @media screen and #{$x-large-up} {
+                            @media screen and #{var.$x-large-up} {
                                 font-size: 1.8rem;
                             }
                         }
             
                         p{
-                            color: $color-1;
+                            color: var.$color-1;
                             font-size: .9rem;
                             line-height: 1.5;
                             padding-bottom: 1rem;
@@ -299,15 +172,15 @@ body{
                             padding: 2rem;
                             width: 100%;
 
-                            @media screen and #{$medium-up} {
+                            @media screen and #{var.$medium-up} {
                                 width: 85%;
                             }
 
-                            @media screen and #{$large-up} {
+                            @media screen and #{var.$large-up} {
                                 width: 75%;
                             }
 
-                            @media screen and #{$x-large-up} {
+                            @media screen and #{var.$x-large-up} {
                                 width: 60%;
                             }
                         }
@@ -338,7 +211,7 @@ body{
                             height: 100px;
                             width: 100px;
 
-                            @media screen and #{$medium-up} {
+                            @media screen and #{var.$medium-up} {
                                 height: 150px;
                                 width: 150px;
                             }
@@ -364,19 +237,19 @@ body{
                             gap: 2rem;
                             height: 360px;
                         
-                            @media screen and #{$small-up}{
+                            @media screen and #{var.$small-up}{
                                 height: 180px;
                             }
                         }
                         
                         .frontface-1, .frontface-2{
-                            background-color: var(--couleur-cinq);
+                            background-color: var.$color-5;
                             border-radius: .3rem;
                             padding: 2rem;
                         }
                         
                         .backface{
-                            background-color: var(--couleur-quatre);
+                            background-color: var.$color-4;
                             border-radius: .3rem;
                             padding: 2rem;
                         }
@@ -417,7 +290,7 @@ body{
                         }
                         
                         div.border-radius{
-                            background-color: var(--couleur-cinq);
+                            background-color: var.$color-5;
                             display: flex;
                             flex-wrap: wrap;
                             font-size: 1rem;
@@ -509,13 +382,13 @@ body{
                         }
                         
                         div.linear-gradient{
-                            background: linear-gradient(var(--couleur-trois), var(--couleur-cinq));
+                            background: linear-gradient(var.$color-3, var.$color-5);
                             height: 200px;
                             width: 100%;
                         }
                         
                         div.radial-gradient{
-                            background: radial-gradient(var(--couleur-trois), var(--couleur-cinq));
+                            background: radial-gradient(var.$color-3, var.$color-5);
                             height: 200px;
                             width: 100%;
                         }
@@ -531,7 +404,7 @@ body{
                         
                         .square, .square{
                             align-items: center;
-                            background-color: var(--couleur-cinq);
+                            background-color: var.$color-5;
                             border-radius: .2rem;
                             display: flex;
                             font-size: 1.4rem;
@@ -546,11 +419,11 @@ body{
                             gap: 1rem;
                             grid-template-columns: repeat(2, auto);
 
-                            @media screen and #{$medium-up} {
+                            @media screen and #{var.$medium-up} {
                                 grid-template-columns: repeat(3, auto);
                             }
 
-                            @media screen and #{$large-up} {
+                            @media screen and #{var.$large-up} {
                                 grid-template-columns: repeat(4, auto);
                             }
                         }
@@ -629,21 +502,21 @@ body{
                         }
                         
                         .outline-offset{
-                            background-color: var(--couleur-cinq);
+                            background-color: var.$color-5;
                             display: flex;
                             justify-content: center;
                             padding: 1rem;
                         }
                         
                         .outline-offset._1{
-                            border: .2rem solid var(--couleur-quatre);
-                            outline: .2rem solid var(--couleur-un);
+                            border: .2rem solid var.$color-4;
+                            outline: .2rem solid var.$color-1;
                             outline-offset: .5rem;
                         }
                         
                         .outline-offset._2{
-                            border: .2rem solid var(--couleur-quatre);
-                            outline: .2rem dashed var(--couleur-un);
+                            border: .2rem solid var.$color-4;
+                            outline: .2rem dashed var.$color-1;
                             outline-offset: 1rem;
                         }
                     }
@@ -665,7 +538,7 @@ body{
                         }
                         
                         div.overflow-exemple p{
-                            border: .2rem solid var(--couleur-un);
+                            border: .2rem solid var.$color-1;
                             border-radius: .2rem;
                             height: 100px;
                             padding: .5rem;
@@ -697,7 +570,7 @@ body{
                         
                         div.transform {
                             align-items: center;
-                            background-color: $color-5;
+                            background-color: var.$color-5;
                             display: flex;
                             flex-wrap: wrap;
                             font-size: 1rem;
@@ -741,7 +614,7 @@ body{
                         }   
                         
                         div.transition{
-                            background-color: var(--couleur-cinq);
+                            background-color: var.$color-5;
                             border-radius: .5rem;
                             padding: 1.5rem;
                             width: 220px;
@@ -780,7 +653,7 @@ body{
                         }
                         
                         .writing-mode{
-                            background-color: $color-5;
+                            background-color: var.$color-5;
                             border-radius: .5rem;
                             padding: 2rem;
                             width: 60%;
@@ -803,37 +676,16 @@ body{
         }
     }
 
-    footer{
-        background-color: $color-1;
-        box-shadow: 0 0 6px 2px rgba(0, 0, 0, .4);
-        color: $color-2;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        letter-spacing: 1px;
-        padding: 2rem;
-        user-select: none;
-
-        p{
-            color: $color-2;
-            padding: .3rem;
-        }
-
-        @media screen and #{$medium-up} {
-            padding: 4rem;
-        }
-    }
-
     ul{
         list-style: none;
     }
 
     p{
-        @media screen and #{$large-up} {
+        @media screen and #{var.$large-up} {
             font-size: 1rem;
         }
 
-        @media screen and #{$x-large-up} {
+        @media screen and #{var.$x-large-up} {
             font-size: 1.3rem;
         }
     }
@@ -843,14 +695,7 @@ body{
     }   
 }
 
-@media screen and (min-width: 1024px){
-    .level-2__link{
-        font-size: 1.4rem;
-    }
-}
-
 /* 
 - dropdown arrows
-- header animation
-- toggle view option
+- ajuster/peaufiner contenu et exemples
 */

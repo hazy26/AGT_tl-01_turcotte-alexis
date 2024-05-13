@@ -1,7 +1,7 @@
 @import "https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap";
 header {
   z-index: 100;
-  background-color: #131515;
+  background-color: #5e3023;
   justify-content: space-between;
   align-items: center;
   gap: .5rem;
@@ -11,11 +11,10 @@ header {
   display: flex;
   position: sticky;
   top: 0;
-  box-shadow: 0 2px 6px #0006;
 }
 
 header h1 a {
-  color: #fffafb;
+  color: #f3e9dc;
   letter-spacing: 2px;
   z-index: 1;
   font-family: Lora, serif;
@@ -37,13 +36,13 @@ header h1 a {
 }
 
 header h1 a:hover {
-  color: var(--couleur-cinq);
-  border-bottom: .1rem solid #50b2c0;
+  color: #c08552;
+  border-bottom: .1rem solid #c08552;
 }
 
 header nav {
   z-index: -1;
-  background-color: #131515;
+  background-color: #5e3023;
   border-radius: 0 0 1rem 1rem;
   flex-direction: column;
   width: fit-content;
@@ -84,7 +83,7 @@ header nav ul.first-level a {
 }
 
 header nav ul.first-level a:hover {
-  color: #50b2c0;
+  color: #c08552;
 }
 
 @media screen and (width >= 1024px) {
@@ -104,18 +103,18 @@ header .menu__icon {
   transform: scale(.9);
 }
 
-header .open {
-  filter: brightness(1.2);
-  background-color: #50b2c0;
-  transform: scale(1)rotate(180deg);
-}
-
 header .menu__icon:hover {
-  background-color: #50b2c0;
+  background-color: #c08552;
 }
 
 header .menu__icon:active {
   filter: brightness(1.4);
+}
+
+header .open {
+  filter: brightness(1.2);
+  background-color: #c08552;
+  transform: scale(1)rotate(180deg);
 }
 
 .minimize {
@@ -129,23 +128,18 @@ footer {
   letter-spacing: 1px;
   -webkit-user-select: none;
   user-select: none;
-  background-color: #131515;
+  z-index: 10;
+  background-color: #5e3023;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem;
+  align-items: center;
+  padding: 5rem 2rem;
   display: flex;
-  box-shadow: 0 0 6px 2px #0006;
 }
 
 footer p {
   color: #fffafb;
   padding: .3rem;
-}
-
-@media screen and (width >= 768px) {
-  footer {
-    padding: 4rem;
-  }
 }
 
 * {
@@ -162,44 +156,48 @@ footer p {
 }
 
 body {
+  color: #5e3023;
   flex-direction: column;
   display: flex;
   position: relative;
 }
 
 body main {
-  background-color: #fddec9;
+  background-color: #f3e9dc;
   flex-direction: column;
   justify-content: center;
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 7rem;
   display: flex;
-  box-shadow: inset 0 0 6px 4px #00000080;
+  position: relative;
 }
 
 @media screen and (width >= 768px) {
   body main {
-    padding: 4rem;
+    padding: 4rem 4rem 7rem;
   }
 }
 
 body main .btn__retour-haut {
   cursor: pointer;
-  z-index: 1;
-  background-color: #fffafb;
-  border: .2rem solid #50b2c0;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  padding: .95rem;
-  position: fixed;
-  bottom: 3rem;
-  right: 2rem;
-  box-shadow: 0 0 8px 4px #0003;
+  z-index: 0;
+  background-color: #5e3023;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 3.5rem 5rem;
+  display: flex;
+  position: absolute;
+  bottom: -5.5rem;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+body main .btn__retour-haut i {
+  transform: scale(1)translate(0, -2.2rem);
 }
 
 body main .btn__retour-haut:hover {
-  background-color: #50b2c0;
-  border: .2rem solid #50b2c0;
+  background-color: #c08552;
 }
 
 body main .btn__retour-haut:active {
@@ -216,17 +214,17 @@ body main .css3-list__main-container {
 }
 
 body main .css3-list__main-container .main-list__item {
-  border: .2rem solid #131515;
+  border: .2rem solid #5e3023;
   border-radius: .3rem;
   box-shadow: 0 0 6px 2px #0000004d;
 }
 
 body main .css3-list__main-container .main-list__item h2 {
-  color: #fffafb;
+  color: #f3e9dc;
   text-align: center;
   -webkit-user-select: none;
   user-select: none;
-  background-color: #131515;
+  background-color: #5e3023;
   padding: 1rem;
   font-family: Lora, serif;
   font-size: 1.6rem;
@@ -250,14 +248,20 @@ body main .css3-list__main-container .main-list__item .properties__container {
   display: flex;
 }
 
-body main .css3-list__main-container .main-list__item .properties__container h3 {
-  color: var(--couleur-un);
+body main .css3-list__main-container .main-list__item .properties__container .title {
   filter: brightness(1.1);
-  background-color: #50b2c0;
-  border-bottom: .1rem solid #131515;
+  background-color: #ddbba6;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .title h3 {
+  color: #5e3023;
+  filter: brightness(1.1);
   flex-direction: row;
   justify-content: space-between;
-  padding: 1rem 2rem;
   font-size: 1.4rem;
   font-weight: 400;
   display: flex;
@@ -265,36 +269,37 @@ body main .css3-list__main-container .main-list__item .properties__container h3 
 }
 
 @media screen and (width >= 1024px) {
-  body main .css3-list__main-container .main-list__item .properties__container h3 {
+  body main .css3-list__main-container .main-list__item .properties__container .title h3 {
     background-position: right 2rem bottom .9rem;
     font-size: 1.8rem;
   }
 }
 
 @media screen and (width >= 1280px) {
-  body main .css3-list__main-container .main-list__item .properties__container h3 {
+  body main .css3-list__main-container .main-list__item .properties__container .title h3 {
     background-position: right 2rem bottom 1.1rem;
     font-size: 2.2rem;
   }
 }
 
-body main .css3-list__main-container .main-list__item .properties__container h3 img {
+body main .css3-list__main-container .main-list__item .properties__container .title i {
   width: 2rem;
+  padding: .5rem 0;
   transition: transform .4s;
+  transform: translate(-.2rem, .4rem);
 }
 
-body main .css3-list__main-container .main-list__item .properties__container h3 img .open-arrow {
+body main .css3-list__main-container .main-list__item .properties__container .title i .open-arrow {
   transform: rotate(180deg);
 }
 
-body main .css3-list__main-container .main-list__item .properties__container :last-child h3 {
-  border-bottom: none;
-  border-radius: 0 0 .1rem .1rem;
+body main .css3-list__main-container .main-list__item .properties__container .title .up-arrow {
+  transform: rotate(180deg)translate(.8rem, .1rem);
 }
 
-body main .css3-list__main-container .main-list__item .properties__container h3:hover {
+body main .css3-list__main-container .main-list__item .properties__container .title:hover {
   cursor: pointer;
-  filter: brightness();
+  filter: brightness(.95);
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown {
@@ -324,10 +329,16 @@ body main .css3-list__main-container .main-list__item .properties__container .dr
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown p {
-  color: #131515;
+  color: #5e3023;
   padding-bottom: 1rem;
-  font-size: .9rem;
+  font-size: 1rem;
   line-height: 1.5;
+}
+
+@media screen and (width >= 1024px) {
+  body main .css3-list__main-container .main-list__item .properties__container .dropdown p {
+    font-size: 1.2rem;
+  }
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown textarea {
@@ -363,8 +374,18 @@ body main .css3-list__main-container .main-list__item .properties__container .dr
   display: flex;
 }
 
+body main .css3-list__main-container .main-list__item .properties__container .dropdown ul a {
+  color: #5e3023;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container .dropdown ul a:hover {
+  color: #c08552;
+}
+
 body main .css3-list__main-container .main-list__item .properties__container .animation__container section.animation__exemple {
-  height: 380px;
+  height: 580px;
   position: relative;
 }
 
@@ -391,36 +412,36 @@ body main .css3-list__main-container .main-list__item .properties__container .an
 
 @keyframes animation__exemple {
   0% {
-    background-color: var(--couleur-un);
-    color: var(--couleur-deux);
+    color: #fffafb;
+    background-color: #5e3023;
     top: 0;
     left: 0;
   }
 
   25% {
-    background-color: var(--couleur-quatre);
-    color: var(--couleur-un);
+    color: #5e3023;
+    background-color: #ddbba6;
     top: 0;
     left: 140px;
   }
 
   50% {
-    background-color: var(--couleur-cinq);
-    color: var(--couleur-un);
+    color: #5e3023;
+    background-color: #c08552;
     top: 240px;
     left: 140px;
   }
 
   75% {
-    background-color: var(--couleur-trois);
-    color: var(--couleur-un);
+    color: #5e3023;
+    background-color: #f3e9dc;
     top: 240px;
     left: 0;
   }
 
   100% {
-    background-color: var(--couleur-un);
-    color: var(--couleur-deux);
+    color: #fffafb;
+    background-color: #5e3023;
     top: 0;
     left: 0;
   }
@@ -444,13 +465,13 @@ body main .css3-list__main-container .main-list__item .properties__container .ba
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .backface-visibility__container .frontface-1, body main .css3-list__main-container .main-list__item .properties__container .backface-visibility__container .frontface-2 {
-  background-color: #50b2c0;
+  background-color: #c08552;
   border-radius: .3rem;
   padding: 2rem;
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .backface-visibility__container .backface {
-  background-color: #faaa8d;
+  background-color: #ddbba6;
   border-radius: .3rem;
   padding: 2rem;
 }
@@ -489,7 +510,7 @@ body main .css3-list__main-container .main-list__item .properties__container .bo
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .border-radius__container div.border-radius {
-  background-color: #50b2c0;
+  background-color: #c08552;
   flex-wrap: wrap;
   justify-content: center;
   width: 100px;
@@ -573,13 +594,13 @@ body main .css3-list__main-container .main-list__item .properties__container .gr
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .gradients__container div.linear-gradient {
-  background: linear-gradient(#fddec9, #50b2c0);
+  background: linear-gradient(#f3e9dc, #c08552);
   width: 100%;
   height: 200px;
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .gradients__container div.radial-gradient {
-  background: radial-gradient(#fddec9, #50b2c0);
+  background: radial-gradient(#f3e9dc, #c08552);
   width: 100%;
   height: 200px;
 }
@@ -592,7 +613,7 @@ body main .css3-list__main-container .main-list__item .properties__container .gr
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .grid-layout__container .square, body main .css3-list__main-container .main-list__item .properties__container .grid-layout__container .square {
-  background-color: #50b2c0;
+  background-color: #c08552;
   border-radius: .2rem;
   justify-content: center;
   align-items: center;
@@ -689,7 +710,7 @@ body main .css3-list__main-container .main-list__item .properties__container .ou
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .outline__offset .outline-offset {
-  background-color: #50b2c0;
+  background-color: #c08552;
   justify-content: center;
   padding: 1rem;
   display: flex;
@@ -697,14 +718,14 @@ body main .css3-list__main-container .main-list__item .properties__container .ou
 
 body main .css3-list__main-container .main-list__item .properties__container .outline__offset .outline-offset._1 {
   outline-offset: .5rem;
-  border: .2rem solid #faaa8d;
-  outline: .2rem solid #131515;
+  border: .2rem solid #ddbba6;
+  outline: .2rem solid #5e3023;
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .outline__offset .outline-offset._2 {
   outline-offset: 1rem;
-  border: .2rem solid #faaa8d;
-  outline: .2rem dashed #131515;
+  border: .2rem solid #ddbba6;
+  outline: .2rem dashed #5e3023;
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .overflow__container div.overflow-exemple {
@@ -723,7 +744,7 @@ body main .css3-list__main-container .main-list__item .properties__container .ov
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .overflow__container div.overflow-exemple p {
-  border: .2rem solid #131515;
+  border: .2rem solid #5e3023;
   border-radius: .2rem;
   width: 200px;
   height: 100px;
@@ -751,7 +772,7 @@ body main .css3-list__main-container .main-list__item .properties__container .tr
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .transform__container div.transform {
-  background-color: #50b2c0;
+  background-color: #c08552;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -793,31 +814,32 @@ body main .css3-list__main-container .main-list__item .properties__container .tr
   display: flex;
 }
 
-body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition {
-  background-color: #50b2c0;
+body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition-exemple .transition {
+  color: #f3e9dc;
   border-radius: .5rem;
   width: 220px;
   padding: 1.5rem;
+  background-color: #c08552 !important;
 }
 
-body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition p {
+body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition-exemple .transition p {
   width: 180px;
   font-size: .9rem;
 }
 
-body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition.exemple-1 {
+body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition-exemple .transition.exemple-1 {
   transition: width 1s;
 }
 
-body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition.exemple-2 {
+body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition-exemple .transition.exemple-2 {
   transition: width 3s;
 }
 
-body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition.exemple-3 {
+body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition-exemple .transition.exemple-3 {
   transition: width 6s;
 }
 
-body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition.exemple-1:hover, body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition.exemple-2:hover, body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition.exemple-3:hover {
+body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition-exemple .transition.exemple-1:hover, body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition-exemple div.transition.exemple-2:hover, body main .css3-list__main-container .main-list__item .properties__container .transition__container div.transition-exemple div.transition.exemple-3:hover {
   width: 100%;
 }
 
@@ -829,22 +851,22 @@ body main .css3-list__main-container .main-list__item .properties__container .wr
   display: flex;
 }
 
-body main .css3-list__main-container .main-list__item .properties__container .writing-mode__container .writing-mode {
-  background-color: #50b2c0;
+body main .css3-list__main-container .main-list__item .properties__container .writing-mode__container div.writing-mode-exemple .writing-mode {
+  background-color: #c08552;
   border-radius: .5rem;
   width: 60%;
   padding: 2rem;
 }
 
-body main .css3-list__main-container .main-list__item .properties__container .writing-mode__container .writing-mode.horizontal-tb {
+body main .css3-list__main-container .main-list__item .properties__container .writing-mode__container div.writing-mode-exemple .writing-mode.horizontal-tb {
   writing-mode: horizontal-tb;
 }
 
-body main .css3-list__main-container .main-list__item .properties__container .writing-mode__container .writing-mode.vertical-lr {
+body main .css3-list__main-container .main-list__item .properties__container .writing-mode__container div.writing-mode-exemple .writing-mode.vertical-lr {
   writing-mode: vertical-lr;
 }
 
-body main .css3-list__main-container .main-list__item .properties__container .writing-mode__container .writing-mode.vertical-rl {
+body main .css3-list__main-container .main-list__item .properties__container .writing-mode__container div.writing-mode-exemple .writing-mode.vertical-rl {
   writing-mode: vertical-rl;
 }
 

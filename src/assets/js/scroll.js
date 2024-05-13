@@ -13,8 +13,4 @@ window.onscroll = function(){whenScrolling()};
 
 btnRetourHaut.addEventListener('click', () => {
     window.scrollTo(0, 0);
-    h3Links.forEach(link => {
-        link.nextElementSibling.classList.remove('open-arrow');
-        link.nextElementSibling.classList.add('hidden');
-    });
-});
+})

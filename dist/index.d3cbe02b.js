@@ -14,10 +14,6 @@ window.onscroll = function() {
 };
 btnRetourHaut.addEventListener("click", ()=>{
     window.scrollTo(0, 0);
-    h3Links.forEach((link)=>{
-        link.nextElementSibling.classList.remove("open-arrow");
-        link.nextElementSibling.classList.add("hidden");
-    });
 });
 
 //# sourceMappingURL=index.d3cbe02b.js.map

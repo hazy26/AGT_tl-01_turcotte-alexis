@@ -6,7 +6,7 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
 
 :root{
@@ -27,50 +27,16 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 4rem 2rem 7rem 2rem;
         position: relative;
-
-        @media screen and #{var.$medium-up} {
-            padding: 4rem 4rem 7rem 4rem;
-        }
-
-        .btn__retour-haut{
-            align-items: center;
-            background-color: var.$color-1;
-            border-radius: 100%;
-            bottom: -5.5rem;
-            display: flex;
-            cursor: pointer;
-            justify-content: center;
-            padding: 3.5rem 5rem;
-            position: absolute;
-            right: 50%;
-            transform: translateX(50%);
-            z-index: 0;
-        }
-
-        .btn__retour-haut i{
-            transform: scale(1) translate(0, -2.2rem);
-        }
-
-        .btn__retour-haut:hover{
-            background-color: var.$color-5;
-        }
-        
-        .btn__retour-haut:active{
-            box-shadow: inset 0 0 8px 4px rgba(0, 0, 0, 20%);
-        }
 
         .css3-list__main-container{
             display: flex;
             flex-direction: column;
-            gap: 2rem;
             margin: 0 auto;
             max-width: 1024px;
             width: 100%;
 
             .main-list__item{
-                border: .2rem solid var.$color-1;
                 border-radius: .3rem;
                 box-shadow: 0 0 6px 2px rgb(0, 0, 0, .3);
 
@@ -100,6 +66,7 @@ body{
                     .title{
                         align-items: center;
                         background-color: var.$color-4;
+                        border-bottom: 1px solid var.$color-1;
                         display: flex;
                         filter: brightness(1.1);
                         justify-content: space-between;
@@ -215,45 +182,37 @@ body{
                                 }
                             }
                         }
-                    }
 
-                    .animation__container{
                         section.animation__exemple{
                             height: 580px;
                             position: relative;
-                        }
-                        
-                        div.animation__exemple{
-                            align-items: center;
-                            animation-name: animation__exemple;
-                            animation-duration: 3s;
-                            animation-iteration-count: infinite;
-                            border-radius: .5rem;
-                            display: flex;
-                            font-size: .8rem;
-                            justify-content: center;
-                            position: absolute;
-                            height: 100px;
-                            width: 100px;
-
-                            @media screen and #{var.$medium-up} {
-                                height: 150px;
-                                width: 150px;
+    
+                            div.animation__exemple{
+                                align-items: center;
+                                animation-name: animation__exemple;
+                                animation-duration: 3s;
+                                animation-iteration-count: infinite;
+                                border-radius: .5rem;
+                                display: flex;
+                                font-size: .8rem;
+                                justify-content: center;
+                                position: absolute;
+                                height: 100px;
+                                width: 100px;
+        
+                                @media screen and #{var.$medium-up} {
+                                    height: 150px;
+                                    width: 150px;
+                                }
                             }
-                        }
-                        
-                        @keyframes animation__exemple {
-                            0%   {background-color:var.$color-1; left:0px; top:0px;color: var.$color-2;}
-                            25%  {background-color:var.$color-4; left:140px; top:0px;color: var.$color-1;}
-                            50%  {background-color:var.$color-5; left:140px; top:240px;color: var.$color-1;}
-                            75%  {background-color:var.$color-3; left:0px; top:240px;color: var.$color-1;}
-                            100% {background-color:var.$color-1; left:0px; top:0px;color: var.$color-2;}
-                        }
-                    }
-
-                    .backface-visibility__container{
-                        div.backface-visibility{
-                            position: relative;
+                            
+                            @keyframes animation__exemple {
+                                0%   {background-color:var.$color-1; left:0px; top:0px;color: var.$color-2;}
+                                25%  {background-color:var.$color-4; left:140px; top:0px;color: var.$color-1;}
+                                50%  {background-color:var.$color-5; left:140px; top:240px;color: var.$color-1;}
+                                75%  {background-color:var.$color-3; left:0px; top:240px;color: var.$color-1;}
+                                100% {background-color:var.$color-1; left:0px; top:0px;color: var.$color-2;}
+                            }
                         }
 
                         div.backface-visibility-exemple{
@@ -265,75 +224,75 @@ body{
                             @media screen and #{var.$small-up}{
                                 height: 180px;
                             }
+    
+                            div.backface-visibility{
+                                position: relative;
+    
+                                .frontface-1, .frontface-2{
+                                    background-color: var.$color-5;
+                                    border-radius: .3rem;
+                                    padding: 2rem;
+                                }
+                                
+                                .backface{
+                                    background-color: var.$color-4;
+                                    border-radius: .3rem;
+                                    padding: 2rem;
+                                }
+                                
+                                .frontface-1{
+                                    opacity: .7;
+                                    position: absolute;
+                                    z-index: 1;
+                                }
+                                
+                                .backface.__visible{
+                                    backface-visibility: visible;
+                                    position: absolute;
+                                    left: 1rem;
+                                    transform: rotateY(180deg);
+                                }
+                                
+                                .frontface-2{
+                                    opacity: .7;
+                                    position: absolute;
+                                    z-index: 1;
+                                }
+                                
+                                .backface.__hidden{
+                                    backface-visibility: hidden;
+                                    position: absolute;
+                                    left: 1rem;
+                                    transform: rotateY(180deg);
+                                }
+                            }
                         }
-                        
-                        .frontface-1, .frontface-2{
-                            background-color: var.$color-5;
-                            border-radius: .3rem;
-                            padding: 2rem;
-                        }
-                        
-                        .backface{
-                            background-color: var.$color-4;
-                            border-radius: .3rem;
-                            padding: 2rem;
-                        }
-                        
-                        .frontface-1{
-                            opacity: .7;
-                            position: absolute;
-                            z-index: 1;
-                        }
-                        
-                        .backface.__visible{
-                            backface-visibility: visible;
-                            position: absolute;
-                            left: 1rem;
-                            transform: rotateY(180deg);
-                        }
-                        
-                        .frontface-2{
-                            opacity: .7;
-                            position: absolute;
-                            z-index: 1;
-                        }
-                        
-                        .backface.__hidden{
-                            backface-visibility: hidden;
-                            position: absolute;
-                            left: 1rem;
-                            transform: rotateY(180deg);
-                        }
-                    }
-
-                    .border-radius__container{
+    
                         div.border-radius-exemple{
                             display: flex;
                             flex-wrap: wrap;
                             gap: 3rem;
                             justify-content: center;
+    
+                            div.border-radius{
+                                background-color: var.$color-5;
+                                display: flex;
+                                flex-wrap: wrap;
+                                font-size: 1rem;
+                                justify-content: center;
+                                padding: 1.5rem;
+                                width: 100px;
+                            }
+                            
+                            div.border-radius.exemple-1{
+                                border-radius: 1rem;
+                            }
+                            
+                            div.border-radius.exemple-2{
+                                border-radius: 2rem 4rem 6rem 0rem;
+                            }
                         }
-                        
-                        div.border-radius{
-                            background-color: var.$color-5;
-                            display: flex;
-                            flex-wrap: wrap;
-                            font-size: 1rem;
-                            justify-content: center;
-                            padding: 1.5rem;
-                            width: 100px;
-                        }
-                        
-                        div.border-radius.exemple-1{
-                            border-radius: 1rem;
-                        }
-                        
-                        div.border-radius.exemple-2{
-                            border-radius: 2rem 4rem 6rem 0rem;
-                        }
-                    }
 
-                    .border-image__container{
                         h4.border-image{
                             border: 2rem solid transparent;
                             border-image: url("https://cdn.pixabay.com/photo/2020/02/06/01/52/frame-4822807_1280.png") 100 round;
@@ -341,60 +300,54 @@ body{
                             justify-content: center;
                             padding: 1rem;
                         }
-                    }
-
-                    .columns__container{
+    
                         .columns__exemple{
                             columns: 2;
+                            
+                            .columns__exemple h4{
+                                column-span: all;
+                                text-align: center;
+                            }
                         }
-                        
-                        .columns__exemple h4{
-                            column-span: all;
-                            text-align: center;
-                        }
-                    }
-
-                    .filter__container{
-                        .filter__exemples{
+    
+                        .filter__exemple{
                             display: flex;
                             flex-wrap: wrap;
                             gap: 1.5rem;
                             justify-content: space-evenly;
+    
+                            figcaption{
+                                font-size: 1.2rem;
+                                padding: 1rem;
+                                text-align: center;
+                            }
+                            
+                            .filter__exemples img{
+                                border-radius: 1rem;
+                                box-shadow: 4px 4px 6px 0 rgb(0 0 0 / 50%);
+                            }
+                            
+                            .filter-1{
+                                filter: brightness(.5);
+                            }
+                            
+                            .filter-2{
+                                filter: contrast(1.5);
+                            }
+                            
+                            .filter-3{
+                                filter: grayscale(1);
+                            }
+                            
+                            .filter-4 img{
+                                filter: invert(1);
+                            }
+                            
+                            .filter-5{
+                                filter: saturate(3);
+                            }
                         }
-                        
-                        figcaption{
-                            font-size: 1.2rem;
-                            padding: 1rem;
-                            text-align: center;
-                        }
-                        
-                        .filter__exemples img{
-                            border-radius: 1rem;
-                            box-shadow: 4px 4px 6px 0 rgb(0 0 0 / 50%);
-                        }
-                        
-                        .filter-1{
-                            filter: brightness(.5);
-                        }
-                        
-                        .filter-2{
-                            filter: contrast(1.5);
-                        }
-                        
-                        .filter-3{
-                            filter: grayscale(1);
-                        }
-                        
-                        .filter-4 img{
-                            filter: invert(1);
-                        }
-                        
-                        .filter-5{
-                            filter: saturate(3);
-                        }
-                    }
 
-                    .gradients__container{
                         section.gradients{
                             display: flex;
                             flex-direction: column;
@@ -407,26 +360,24 @@ body{
                         }
                         
                         div.linear-gradient{
-                            background: linear-gradient(var.$color-3, var.$color-5);
+                            background: linear-gradient(var.$color-3, var.$color-1);
                             height: 200px;
                             width: 100%;
                         }
                         
                         div.radial-gradient{
-                            background: radial-gradient(var.$color-3, var.$color-5);
+                            background: radial-gradient(var.$color-3, var.$color-1);
                             height: 200px;
                             width: 100%;
                         }
-                    }
-
-                    .grid-layout__container{
+    
                         div.flexbox-exemple{
                             display: flex;
                             flex-wrap: wrap;
                             gap: 1rem;
                             justify-content: space-evenly;
                         }
-                        
+
                         .square, .square{
                             align-items: center;
                             background-color: var.$color-5;
@@ -438,205 +389,153 @@ body{
                             justify-content: center;
                             width: 140px;
                         }
-                        
+    
                         .grid-layout{
                             display: grid;
                             gap: 1rem;
                             grid-template-columns: repeat(2, auto);
-
+    
                             @media screen and #{var.$medium-up} {
                                 grid-template-columns: repeat(3, auto);
                             }
-
+    
                             @media screen and #{var.$large-up} {
                                 grid-template-columns: repeat(4, auto);
                             }
                         }
-                    }
-
-                    .object-fit__container{
-                        div.object-fit-exemple{
-                            align-items: center;
-                            display: flex;
-                            flex-wrap: wrap;
-                            gap: 3rem;
-                            justify-content: center;
-                        }
-                        
-                        .object-fit img{
-                            height: 200px;
-                            width: 300px;
-                        }
-                        
+    
                         section.object-fit-exemple{
                             height: fit-content;
+    
+                            div{
+                                align-items: center;
+                                display: flex;
+                                flex-wrap: wrap;
+                                gap: 3rem;
+                                justify-content: center;
+                            }
+                            
+                            .object-fit img{
+                                height: 200px;
+                                width: 300px;
+                            }
+                            
+                            .fill img{
+                                object-fit: fill;
+                            }
+                            
+                            .contain img{
+                                object-fit: contain;
+                            }
+                            
+                            .cover img{
+                                object-fit: cover;
+                            }
+                            
+                            .none img{
+                                object-fit: none;
+                            }
+                            
+                            .scale-down img{
+                                object-fit: scale-down;
+                            }
+                            
                         }
-                        
-                        .fill img{
-                            object-fit: fill;
-                        }
-                        
-                        .contain img{
-                            object-fit: contain;
-                        }
-                        
-                        .cover img{
-                            object-fit: cover;
-                        }
-                        
-                        .none img{
-                            object-fit: none;
-                        }
-                        
-                        .scale-down img{
-                            object-fit: scale-down;
-                        }
-                    }
-
-                    .opacity__container{
+    
                         div.opacity-exemple{
                             align-items: center;
                             display: flex;
                             flex-wrap: wrap;
                             gap: 2rem;
                             justify-content: center;
+    
+                            .opacity-10 img{
+                                opacity: .1;
+                            }
+                            
+                            .opacity-25 img{
+                                opacity: .25;
+                            }
+                            
+                            .opacity-50 img{
+                                opacity: .5;
+                            }
+                            
+                            .opacity-75 img{
+                                opacity: .75;
+                            }
                         }
-                        
-                        .opacity-10 img{
-                            opacity: .1;
-                        }
-                        
-                        .opacity-25 img{
-                            opacity: .25;
-                        }
-                        
-                        .opacity-50 img{
-                            opacity: .5;
-                        }
-                        
-                        .opacity-75 img{
-                            opacity: .75;
-                        }
-                    }
-
-                    .outline__offset{
+    
                         div.outline-offset-exemple{
                             display: flex;
                             flex-direction: column;
                             gap: 4rem;
+    
+                            .outline-offset{
+                                background-color: var.$color-5;
+                                display: flex;
+                                justify-content: center;
+                                padding: 1rem;
+                            }
+                            
+                            .outline-offset._1{
+                                border: .2rem solid var.$color-4;
+                                outline: .2rem solid var.$color-1;
+                                outline-offset: .5rem;
+                            }
+                            
+                            .outline-offset._2{
+                                border: .2rem solid var.$color-4;
+                                outline: .2rem dashed var.$color-1;
+                                outline-offset: 1rem;
+                            }
                         }
-                        
-                        .outline-offset{
-                            background-color: var.$color-5;
-                            display: flex;
-                            justify-content: center;
-                            padding: 1rem;
-                        }
-                        
-                        .outline-offset._1{
-                            border: .2rem solid var.$color-4;
-                            outline: .2rem solid var.$color-1;
-                            outline-offset: .5rem;
-                        }
-                        
-                        .outline-offset._2{
-                            border: .2rem solid var.$color-4;
-                            outline: .2rem dashed var.$color-1;
-                            outline-offset: 1rem;
-                        }
-                    }
-
-                    .overflow__container{
+    
                         div.overflow-exemple{
                             align-items: center;
                             display: flex;
-                            flex-direction: column;
-                            gap: 6rem;
-                            justify-content: center;
-                        }
-                        
-                        div.overflow-exemple div{
-                            align-items: center;
-                            display: flex;
-                            flex-direction: column;
-                            gap: .5rem;
-                        }
-                        
-                        div.overflow-exemple p{
-                            border: .2rem solid var.$color-1;
-                            border-radius: .2rem;
-                            height: 100px;
-                            padding: .5rem;
-                            width: 200px;
-                        }
-                        
-                        .overflow-hidden{
-                            overflow: hidden;
-                        }
-                        
-                        .overflow-scroll{
-                            overflow: scroll;
-                        }
-                        
-                        .overflow-visible{
-                            overflow: visible;
-                        }
-                    }
-
-                    .transform__container{
-
-                        div.transform-exemple{
-                            align-items: center;
-                            display: flex;
-                            flex-direction: column;
-                            gap: 8rem;
-                            justify-content: center;
-                        }
-                        
-                        div.transform {
-                            align-items: center;
-                            background-color: var.$color-5;
-                            display: flex;
                             flex-wrap: wrap;
-                            font-size: 1rem;
-                            height: 100px;
+                            gap: 6rem;
+                            min-height: 200px;
                             justify-content: center;
-                            padding: .5rem;
-                            width: 200px;
+    
+                            div{
+                                align-items: center;
+                                display: flex;
+                                flex-direction: column;
+                                gap: .5rem;
+                                height: fit-content;
+    
+                                p{
+                                    border: .2rem solid var.$color-1;
+                                    border-radius: .2rem;
+                                    font-size: .9rem;
+                                    height: 100px;
+                                    padding: .5rem;
+                                    width: 200px;
+                                }
+                                
+                                .overflow-hidden{
+                                    overflow: hidden;
+                                }
+                                
+                                .overflow-scroll{
+                                    overflow: scroll;
+                                }
+                                
+                                .overflow-visible{
+                                    overflow: visible;
+                                    
+                                }
+                            }
                         }
-                        
-                        .transform.none{
-                            transform: none;
-                        }
-                        
-                        .transform.rotate-1{
-                            transform: rotate(45deg);
-                        }
-                        
-                        .transform.rotate-2{
-                            transform: rotate(90deg);
-                        }
-                        
-                        .transform.scale{
-                            transform: scale(2.1);
-                        }
-                        
-                        .transform.skew{
-                            transform: skew(30deg, 10deg);
-                        }
-                        
-                        .transform.translate{
-                            transform: translate(100px, -50px);
-                        }
-                    }
-
-                    .transition__container{
+    
                         div.transition-exemple{
                             align-items: flex-start;
                             display: flex;
                             flex-direction: column;
                             gap: 2rem;
-
+    
                             .transition{
                                 background-color: var.$color-5 !important;
                                 color: var.$color-3;
@@ -644,7 +543,7 @@ body{
                                 padding: 1.5rem;
                                 width: 220px;
                             }
-
+    
                             .transition p{
                                 font-size: .9rem;
                                 width: 180px;
@@ -665,18 +564,53 @@ body{
                             .transition.exemple-1:hover, div.transition.exemple-2:hover, div.transition.exemple-3:hover{
                                 width: 100%;
                             }
-                        }   
-                    }
+                        } 
+                        
+                        .transform-exemple{
+                            align-items: center;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8rem;
+                            justify-content: center;
 
-                    .writing-mode__container{
-                            
+                            .transform{
+                                background-color: var.$color-5;
+                                border-radius: .4rem;
+                                color: var.$color-3;
+                                font-size: 1rem;
+                                font-weight: 300;
+                                padding: 2rem;
+                            }
+
+                            .rotate-1{
+                                transform: rotate(45deg);
+                            }
+
+                            .rotate-2{
+                                transform: rotate(90deg);
+                            }
+
+                            .scale{
+                                transform: scale(2.1);
+                            }
+
+                            .skew{
+                                transform: skew(30deg, 10deg);
+                            }
+
+                            .translate{
+                                transform: translate(100px, -50px);
+                            }
+                        }
+
                         div.writing-mode-exemple{
                             align-items: flex-start;
+                            color: var.$color-3;
                             display: flex;
                             flex-direction: column;
                             gap: 2rem;
                             justify-content: center;
-
+    
                             .writing-mode{
                                 background-color: var.$color-5;
                                 border-radius: .5rem;

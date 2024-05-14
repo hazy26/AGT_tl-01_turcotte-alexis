@@ -80,13 +80,18 @@
     <main id="main">
         <ul class="css3-list__main-container">
             <li id="a" class="main-list__item">
-                <h2 class="lettre">A</h2>
-                <ul class="properties__container">
+                <div class="letter-title">
+                    <h2 class="lettre">A</h2>
+                    <i>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                    </i>
+                </div>
+                <ul class="properties__container hidden">
                     <li class="properties__item animation">
                         <div class="title">
                             <h3 id="animation">animation</h3>
                             <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F0CF65"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
                             </i>
                         </div>
                         <div class="dropdown hidden">
@@ -103,22 +108,21 @@
                             </section>
                             <section>
                                 <h4>Le CSS</h4>
-                                <textarea name="animation">
-        div.animation__exemple{
-        animation-name: animation__exemple;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        position: absolute;
-        }
-
-        @keyframes animation__exemple {
-        0%   {background-color:var(--couleur-un); left:0px; top:0px;color: var(--couleur-deux);}
-        25%  {background-color:var(--couleur-quatre); left:200px; top:0px;color: var(--couleur-un);}
-        50%  {background-color:var(--couleur-cinq); left:200px; top:200px;color: var(--couleur-un);}
-        75%  {background-color: rgb(255, 191, 72); left:0px; top:200px;color: var(--couleur-un);}
-        100% {background-color:var(--couleur-un); left:0px; top:0px;color: var(--couleur-deux);}
-        }
-                                </textarea>
+                                <div class="css-text">
+                                    <p>div.animation__exemple{</p>
+                                    <span>animation-name: animation__exemple;</span>
+                                    <span>animation-duration: 3s;</span>
+                                    <span>animation-iteration-count: infinite;</span>
+                                    <span>position: absolute;</span>
+                                    <p>}</p>
+                                    <p>@keyframes animation__exemple {</p>
+                                    <span>0%   {background-color:var(--couleur-un); left:0px; top:0px;color: var(--couleur-deux);}</span>
+                                    <span>25%  {background-color:var(--couleur-quatre); left:200px; top:0px;color: var(--couleur-un);}</span>
+                                    <span>50%  {background-color:var(--couleur-cinq); left:200px; top:200px;color: var(--couleur-un);}</span>
+                                    <span>75%  {background-color: rgb(255, 191, 72); left:0px; top:200px;color: var(--couleur-un);}</span>
+                                    <span>100% {background-color:var(--couleur-un); left:0px; top:0px;color: var(--couleur-deux);}</span>
+                                    <p>}</p>
+                                </div>
                             </section>
                             <section>
                                 <h4>Documentation supplémentaire</h4>
@@ -148,13 +152,18 @@
                 </ul>
             </li>
             <li id="b" class="main-list__item">
-                <h2 class="lettre">B</h2>
-                <ul class="properties__container">
+                <div class="letter-title">
+                    <h2 class="lettre">B</h2>
+                    <i>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                    </i>
+                </div>
+                <ul class="properties__container hidden">
                     <li class="properties__item">
                         <div class="title">
                             <h3 id="backface-visibility">backface-visibility</h3>
                             <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F0CF65"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
                             </i>
                         </div>
                         <div class="dropdown hidden">
@@ -190,15 +199,14 @@
                             </section>
                             <section>
                                 <h4>Le CSS</h4>
-                                <textarea name="backface-visibility">
-        .element.visible{
-        backface-visibility: visible;
-        }
-
-        .element.hidden{
-        backface-visibility: hidden;
-        }
-                                </textarea>
+                                <div class="css-text">
+                                    <p>.element.visible{</p>
+                                    <span>backface-visibility: visible;</span>
+                                    <p>}</p>
+                                    <p>.element.hidden{</p>
+                                    <span>backface-visibility: hidden;</span>
+                                    <p>}</p>
+                                </div>
                             </section>
                             <section>
                                 <h4>Documentation supplémentaire</h4>
@@ -213,7 +221,7 @@
                         <div class="title">
                             <h3 id="border-image">border-image</h3>
                             <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F0CF65"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
                             </i>
                         </div>
                         <div class="dropdown hidden">
@@ -236,12 +244,12 @@
                             </section>
                             <section>
                                 <h4>Le CSS</h4>
-                                <textarea name="border-image">
-        .element{
-        border: 2rem solid transparent;
-        border-image: url("border-image.png") 100 round;
-        }
-                                </textarea>
+                                <div class="css-text">
+                                    <p>.element{</p>
+                                    <span>border: 2rem solid transparent;</span>
+                                    <span>border-image: url("border-image.png") 100 round;</span>
+                                    <p>}</p>
+                                </div>
                             </section>
                             <section>
                                 <h4>Documentation supplémentaire</h4>
@@ -266,7 +274,7 @@
                         <div class="title">
                             <h3 id="border-radius">border-radius</h3>
                             <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F0CF65"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
                             </i>
                         </div>
                         <div class="dropdown hidden">
@@ -284,19 +292,17 @@
                             </div>
                             <section>
                                 <h4>Le CSS</h4>
-                                <textarea name="barder-radius">
-        .exemple-1{
-        border-radius: 0;
-        }
-
-        .exemple-2{
-        border-radius: 1rem;
-        }
-
-        .exemple-3{
-        border-radius: 2rem 4rem 6rem 0rem;
-        }
-                                </textarea>
+                                <div class="css-text">
+                                    <p>.exemple-1{</p>
+                                    <span>border-radius: 0;</span>
+                                    <p>}</p>
+                                    <p>.exemple-2{</p>
+                                    <span>border-radius: 1rem;</span>
+                                    <p>}</p>
+                                    <p>.exemple-3{</p>
+                                    <span>border-radius: 2rem 4rem 6rem 0rem;</span>
+                                    <p>}</p>
+                                </div>
                             </section>
                             <section>
                                 <h4>Documentation supplémentaire</h4>
@@ -318,13 +324,18 @@
                 </ul>
             </li>
             <li id="c" class="main-list__item">
-                <h2 class="lettre">C</h2>
-                <ul class="properties__container">
+                <div class="letter-title">
+                    <h2 class="lettre">C</h2>
+                    <i>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                    </i>
+                </div>
+                <ul class="properties__container hidden">
                     <li class="properties__item">
                         <div class="title">
                             <h3 id="columns">columns</h3>
                             <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F0CF65"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
                             </i>
                         </div>  
                         <div class="dropdown hidden">
@@ -374,16 +385,15 @@
                             </section>
                             <section>
                                 <h4>Le CSS</h4>
-                                <textarea name="columns">
-        .element{
-        columns: 2;
-        }
-
-        .element .titre{
-        column-span: all;
-        text-align: center;
-        }
-                                </textarea>
+                                <div class="css-text">
+                                    <p>.element{</p>
+                                    <span>columns: 2;</span>
+                                    <p>}</p>
+                                    <p>.element .titre{</p>
+                                    <span>column-span: all;</span>
+                                    <span>text-align: center;</span>
+                                    <p>}</p>
+                                </div>
                             </section>
                             <section>
                                 <h4>Documentation supplémentaire</h4>
@@ -415,13 +425,18 @@
                 </ul>
             </li>
             <li id="f" class="main-list__item">
-                <h2 class="lettre">F</h2>
-                <ul class="properties__container">
+                <div class="letter-title">
+                    <h2 class="lettre">F</h2>
+                    <i>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                    </i>
+                </div>
+                <ul class="properties__container hidden">
                     <li class="properties__item">
                         <div class="title">
                             <h3 id="filter">filter</h3>
                             <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F0CF65"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
                             </i>
                         </div>
                         <div class="dropdown hidden">
@@ -463,27 +478,23 @@
                             </section>
                             <section>
                                 <h4>Le CSS</h4>
-                                <textarea name="filter">
-        .element-1{
-        filter: brightness(.5);
-        }
-
-        .element-2{
-        filter: contrast(1.5);
-        }
-
-        .element-3{
-        filter: grayscale(1);
-        }
-
-        .element-4{
-        filter: invert(1);
-        }
-
-        .element-5{
-        filter: saturate(3);
-        }
-                                </textarea>
+                                <div class="css-text">
+                                    <p>.element-1{</p>
+                                    <span>filter: brightness(.5);</span>
+                                    <p>}</p>
+                                    <p>.element-2{</p>
+                                    <span>filter: contrast(1.5);</span>
+                                    <p>}</p>
+                                    <p>.element-3{</p>
+                                    <span>filter: grayscale(1);</span>
+                                    <p>}</p>
+                                    <p>.element-4{</p>
+                                    <span>filter: invert(1);</span>
+                                    <p>}</p>
+                                    <p>.element-5{</p>
+                                    <span>filter: saturate(3);</span>
+                                    <p>}</p>
+                                </div>
                             </section>
                             <section>
                                 <h4>Documentation supplémentaire</h4>
@@ -498,7 +509,7 @@
                         <div class="title">
                             <h3 id="flexbox-layout">flexbox layout</h3>
                             <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F0CF65"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
                             </i>
                         </div>
                         <div class="dropdown hidden">
@@ -546,14 +557,14 @@
                             </section>
                             <section>
                                 <h4>Le CSS</h4>
-                                <textarea name="flexbox">
-        .element{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        justify-content: space-evenly;
-        }
-                                </textarea>
+                                <div class="css-text">
+                                    <p>.element{</p>
+                                    <span>display: flex;</span>
+                                    <span>flex-wrap: wrap;</span>
+                                    <span>gap: 1rem;</span>
+                                    <span>justify-content: space-evenly;</span>
+                                    <p>}</p>
+                                </div>
                             </section>
                             <section>
                                 <h4>Documentation supplémentaire</h4>
@@ -579,13 +590,18 @@
                 </ul>
             </li>
             <li id="g" class="main-list__item">
-                <h2 class="lettre">G</h2>
-                <ul class="properties__container">
+                <div class="letter-title">
+                    <h2 class="lettre">G</h2>
+                    <i>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                    </i>
+                </div>
+                <ul class="properties__container hidden">
                     <li class="properties__item">
                         <div class="title">
                             <h3 id="grid-layout">grid layout</h3>
                             <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F0CF65"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
                             </i>
                         </div>
                         <div class="dropdown hidden">
@@ -638,25 +654,23 @@
                             </section>
                             <section>
                                 <h4>Le CSS</h4>
-                                <textarea name="grid">
-        .element{
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: repeat(2, auto);
-        }         
-
-        @media screen and (min-width: 768px){
-        .element{
-        grid-template-columns: repeat(3, auto);
-        }
-        }
-
-        @media screen and (min-width: 1024px){
-        .element{
-        grid-template-columns: repeat(4, auto);
-        }
-        }
-                                </textarea>
+                                <div class="css-text">
+                                    <p>.element{</p>
+                                    <span>display: grid;</span>
+                                    <span>gap: 1rem;</span>
+                                    <span>grid-template-columns: repeat(2, auto);</span>
+                                    <p>}</p>
+                                    <p>@media screen and (min-width: 768px){</p>
+                                    <p>.element{</p>
+                                    <span>grid-template-columns: repeat(3, auto);</span>
+                                    <p>}</p>
+                                    <p>}</p>
+                                    <p>@media screen and (min-width: 1024px){</p>
+                                    <p>.element{</p>
+                                    <span>grid-template-columns: repeat(4, auto);</span>
+                                    <p}></p>
+                                    <p>}</p>
+                                </div>
                             </section>
                             <section>
                                 <h4>Documentation supplémentaire</h4>
@@ -701,7 +715,7 @@
                         <div class="title">
                             <h3 id="gradients">gradients</h3>
                             <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F0CF65"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
                             </i>
                         </div>
                         <div class="dropdown hidden">
@@ -720,11 +734,11 @@
                                 </section>
                                 <section>
                                     <h4>Le CSS</h4>
-                                    <textarea name="linear-gradient">
-        .element{
-        background: linear-gradient(couleur-1, couleur-2);
-        }
-                                    </textarea>
+                                    <div class="css-text">
+                                        <p>.element{</p>
+                                        <span>background: linear-gradient(couleur-1, couleur-2);</span>
+                                        <p>}</p>
+                                    </div>
                                 </section>
                                 <section>
                                     <h4>Documentation supplémentaire</h4>
@@ -749,11 +763,11 @@
                                 </section>
                                 <section>
                                     <h4>Le CSS</h4>
-                                    <textarea name="radial-gradient" id="">
-        .element{
-            background: radial-gradient(couleur-1, couleur-2);
-        }
-                                    </textarea>
+                                    <div class="css-text">
+                                        <p>.element{</p>
+                                        <span>background: radial-gradient(couleur-1, couleur-2);</span>
+                                        <p>}</p>
+                                    </div>
                                 </section>
                                 <section>
                                     <h4>Documentation supplémentaire</h4>
@@ -768,13 +782,18 @@
                 </ul>
             </li>
             <li id="o" class="main-list__item">
-                <h2 class='lettre'>O</h2>
-                <ul class="properties__container">
+                <div class="letter-title">
+                    <h2 class='lettre'>O</h2>
+                    <i>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                    </i>
+                </div>
+                <ul class="properties__container hidden">
                     <li class="properties__item">
                         <div class="title">
                             <h3 id="object-fit">object-fit</h3>
                             <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F0CF65"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
                             </i>
                         </div>
                         <div class="dropdown hidden">
@@ -834,32 +853,27 @@
                             </section>
                             <section>
                                 <h4>Le CSS</h4>
-                                <textarea name="object-fit">
-        img{
-        height: 200px:
-        width: 300px;
-        }
-
-        .fill img{
-        object-fit: fill;
-        }
-
-        .contain img{
-        object-fit: contain;
-        }
-
-        .cover img{
-        object-fit: cover;
-        }
-
-        .none img{
-        object-fit: none;
-        }
-
-        .scale-down img{
-        object-fit: scale-down;
-        }   
-                                </textarea>
+                                <div class="css-text">
+                                    <p>img{</p>
+                                    <span>height: 200px:</span>
+                                    <span>width: 300px;</span>
+                                    <p>}</p>
+                                    <p>.fill img{</p>
+                                    <span>object-fit: fill;</span>
+                                    <p>}</p>
+                                    <p>.contain img{</p>
+                                    <span>object-fit: contain;</span>
+                                    <p>}</p>
+                                    <p>.cover img{</p>
+                                    <span>object-fit: cover;</span>
+                                    <p>}</p>
+                                    <p>.none img{</p>
+                                    <span>object-fit: none;</span>
+                                    <p>}</p>
+                                    <p>.scale-down img{</p>
+                                    <span>object-fit: scale-down;</span>
+                                    <p>}</p>
+                                </div>
                             </section>
                             <section>
                                 <h4>Documentation supplémentaire</h4>
@@ -874,7 +888,7 @@
                         <div class="title">
                             <h3 id="opacity">opacity</h3>
                             <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F0CF65"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
                             </i>
                         </div>
                         <div class="dropdown hidden">
@@ -909,23 +923,20 @@
                             </section>
                             <section>
                                 <h4>Le CSS</h4>
-                                <textarea name="opacity">
-        .opacity-10 img{
-        opacity: .1;
-        }
-
-        .opacity-25 img{
-        opacity: .25;
-        }
-
-        .opacity-50 img{
-        opacity: .5;
-        }
-
-        .opacity-75 img{
-        opacity: .75;
-        }
-                                </textarea>
+                                <div class="css-text">
+                                    <p>.opacity-10 img{</p>
+                                    <span>opacity: .1;</span>
+                                    <p>}</p>
+                                    <p>.opacity-25 img{</p>
+                                    <span>opacity: .25;</span>
+                                    <p>}</p>
+                                    <p>.opacity-50 img{</p>
+                                    <span>opacity: .5;</span>
+                                    <p>}</p>
+                                    <p>.opacity-75 img{</p>
+                                    <span>opacity: .75;</span>
+                                    <p>}</p>
+                                </div>
                             </section>
                             <section>
                                 <h4>Documentation supplémentaire</h4>
@@ -940,7 +951,7 @@
                         <div class="title">
                             <h3 id="outline-offset">outline-offset</h3>
                             <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F0CF65"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
                             </i>
                         </div>
                         <div class="dropdown hidden">
@@ -967,19 +978,18 @@
                             </section>
                             <section>
                                 <h4>Le CSS</h4>
-                                <textarea name="outline-offset">
-        .element-1{
-        border: .2rem solid var(--couleur-quatre);
-        outline: .2rem solid var(--couleur-un);
-        outline-offset: .5rem;
-        }
-
-        .element-2{
-        border: .2rem solid var(--couleur-quatre);
-        outline: .2rem dashed var(--couleur-un);
-        outline-offset: 1rem;
-        }
-                                </textarea>
+                                <div class="css-text">
+                                    <p>.element-1{</p>
+                                    <span>border: .2rem solid var(--couleur-quatre);</span>
+                                    <span>outline: .2rem solid var(--couleur-un);</span>
+                                    <span>outline-offset: .5rem;</span>
+                                    <p>}</p>
+                                    <p>.element-2{</p>
+                                    <span>border: .2rem solid var(--couleur-quatre);</span>
+                                    <span>outline: .2rem dashed var(--couleur-un);</span>
+                                    <span>outline-offset: 1rem;</span>
+                                    <p>}</p>
+                                </div>
                             </section>
                             <section>
                                 <h4>Documentation supplémentaire</h4>
@@ -994,7 +1004,7 @@
                         <div class="title">
                             <h3 id="overflow">overflow</h3>
                             <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F0CF65"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
                             </i>
                         </div>
                         <div class="dropdown hidden">
@@ -1050,19 +1060,17 @@
                             </section>
                             <section>
                                 <h4>Le CSS</h4>
-                                <textarea name="overflow">
-        .overflow-hidden{
-        overflow: hidden;
-        }
-
-        .overflow-scroll{
-        overflow: scroll;
-        }
-
-        .overflow-visible{
-        overflow: visible;
-        }
-                                </textarea>
+                                <div class="css-text">
+                                    <p>.overflow-hidden{</p>
+                                    <span>overflow: hidden;</span>
+                                    <p>}</p>
+                                    <p>.overflow-scroll{</p>
+                                    <span>overflow: scroll;</span>
+                                    <p>}</p>
+                                    <p>.overflow-visible{</p>
+                                    <span>overflow: visible;</span>
+                                    <p>}</p>
+                                </div>
                             </section>
                             <section>
                                 <h4>Documentation supplémentaire</h4>
@@ -1089,14 +1097,19 @@
                     </li>
                 </ul>
             </li>
-            <li id="t" class="main-list__item">
-                <h2 class="lettre">T</h2>
-                <ul class="properties__container">
+            <li id="t" class="main-list__item">  
+                <div class="letter-title">
+                    <h2 class="lettre">T</h2>
+                    <i>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                    </i>
+                </div>
+                <ul class="properties__container hidden">
                     <li class="properties__item">
                         <div class="title">
                             <h3 id="transform">transform</h3>
                             <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F0CF65"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
                             </i>
                         </div>
                         <div class="dropdown transform__container hidden">
@@ -1122,31 +1135,26 @@
                             </section>
                             <section>
                                 <h4>Le CSS</h4>
-                                <textarea name="transform">
-        .transform.none{
-        transform: none;
-        }
-
-        .transform.rotate-1{
-        transform: rotate(45deg);
-        }
-
-        .transform.rotate-2{
-        transform: rotate(90deg);
-        }
-
-        .transform.scale{
-        transform: scale(2.1);
-        }
-
-        .transform.skew{
-        transform: skew(30deg, 10deg);
-        }
-
-        .transform.translate{
-        transform: translate(100px, -50px);
-        }
-                                </textarea>
+                                <div class="css-text">
+                                    <p>.transform.none{</p>
+                                    <span>transform: none;</span>
+                                    <p>}</p>
+                                    <p>.transform.rotate-1{</p>
+                                    <span>transform: rotate(45deg);</span>
+                                    <p>}</p>
+                                    <p>.transform.rotate-2{</p>
+                                    <span>transform: rotate(90deg);</span>
+                                    <p>}</p>
+                                    <p>.transform.scale{</p>
+                                    <span>transform: scale(2.1);</span>
+                                    <p>}</p>
+                                    <p>.transform.skew{</p>
+                                    <span>transform: skew(30deg, 10deg);</span>
+                                    <p>}</p>
+                                    <p>.transform.translate{</p>
+                                    <span>transform: translate(100px, -50px);</span>
+                                    <p>}</p>
+                                </div>
                             </section>
                             <section>
                                 <h4>Documentation supplémentaire</h4>
@@ -1167,7 +1175,7 @@
                         <div class="title">
                             <h3 id="transition">transition</h3>
                             <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F0CF65"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
                             </i>
                         </div>
                         <div class="dropdown hidden">
@@ -1211,23 +1219,20 @@
                             </section>
                             <section>
                                 <h4>Le CSS</h4>
-                                <textarea name="transition">
-        .exemple-1{
-        transition: width 1s;
-        }
-
-        .exemple-2{
-        transition: width 3s;
-        }
-
-        .exemple-3{
-        transition: width 6s;
-        }
-
-        exemples:hover{
-        width: 100%;
-        }
-                                </textarea>
+                                <div class="css-text">
+                                    <p>.exemple-1{</p>
+                                    <span>transition: width 1s;</span>
+                                    <p>}</p>
+                                    <p>.exemple-2{</p>
+                                    <span>transition: width 3s;</span>
+                                    <p>}</p>
+                                    <p>.exemple-3{</p>
+                                    <span>transition: width 6s;</span>
+                                    <p>}</p>
+                                    <p>exemples:hover{</p>
+                                    <span>width: 100%;</span>
+                                    <p>}</p>
+                                </div>
                             </section>
                             <section>
                                 <h4>Documentation supplémentaire</h4>
@@ -1250,14 +1255,19 @@
                     </li>
                 </ul>
             </li>
-            <li id="w" class="main-list__item">
-                <h2 class="lettre">W</h2>
-                <ul class="properties__container">
+            <li id="w" class="main-list__item">   
+                <div class="letter-title">
+                    <h2 class="lettre">W</h2>
+                    <i>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                    </i>
+                </div>
+                <ul class="properties__container hidden">
                     <li class="properties__item">
                         <div class="title">
                             <h3 id="writing-mode">writing-mode</h3>
                             <i>
-                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#F0CF65"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
+                                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-344 240-584l47.33-47.33L480-438.67l192.67-192.66L720-584 480-344Z"/></svg>    
                             </i>
                         </div>
                         <div class="dropdown writing-mode__container hidden">
@@ -1297,19 +1307,17 @@
                             </section>
                             <section>
                                 <h4>Le CSS</h4>
-                                <textarea name="writing-mode">
-        .horizontal-tb{
-        writing-mode: horizontal-tb;
-        }
-
-        .vertical-lr{
-        writing-mode: vertical-lr;
-        }
-
-        .vertical-rl{
-        writing-mode: vertical-rl;
-        }
-                                </textarea>
+                                <div class="css-text">
+                                    <p>.horizontal-tb{</p>
+                                    <span>writing-mode: horizontal-tb;</span>
+                                    <p>}</p>
+                                    <p>.vertical-lr{</p>
+                                    <span>writing-mode: vertical-lr;</span>
+                                    <p>}</p>
+                                    <p>.vertical-rl{</p>
+                                    <span>writing-mode: vertical-rl;</span>
+                                    <p>}</p>
+                                </div>
                             </section>
                             <section>
                                 <h4>Documentation supplémentaire</h4>
@@ -1327,7 +1335,7 @@
     <footer>
         <a class="btn__retour-haut">
             <i>
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F0CF65"><path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z"/></svg>    
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#3D2C2E"><path d="M480-545.33 287.33-352.67 240-400l240-240 240 240-47.33 47.33L480-545.33Z"/></svg>    
             </i>
         </a>
         <div class="texte__content">

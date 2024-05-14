@@ -1,4 +1,3 @@
-
 /* MENU BURGER */
 const btnMenu = document.querySelector('.menu__icon');
 const nav = document.querySelector('nav');
@@ -20,12 +19,17 @@ function toggleMenu(){
 
 
 /* DROPDOWNS */
-const links = document.querySelectorAll('.title');
-const arrows = document.querySelector('.down-arrow');
-links.forEach(link => {
-    link.addEventListener('click', () => {
-        link.nextElementSibling.classList.toggle('hidden');
-        link.lastElementChild.classList.toggle('up-arrow');
+const dropdowns = document.querySelectorAll('.title');
+dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('click', () => {
+        dropdown.nextElementSibling.classList.toggle('hidden');
+    });
+});
+
+const mainDropdowns = document.querySelectorAll('.letter-title');
+mainDropdowns.forEach(dropdown => {
+    dropdown.addEventListener('click', () => {
+        dropdown.nextElementSibling.classList.toggle('hidden');
     });
 });
 

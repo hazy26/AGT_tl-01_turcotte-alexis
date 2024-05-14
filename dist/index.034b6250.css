@@ -1,7 +1,7 @@
 @import "https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap";
 header {
   z-index: 1;
-  background-color: #424c55;
+  background-color: #ef764b;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -14,7 +14,7 @@ header {
 }
 
 header span {
-  color: #f0cf65;
+  color: #3d2c2e;
   letter-spacing: 1rem;
   text-align: center;
   font-size: 6rem;
@@ -22,9 +22,9 @@ header span {
 }
 
 header .header__bottom {
-  background-color: #424c55;
-  border-top: 1px solid #f0cf65;
-  border-bottom: 1px solid #f0cf65;
+  background-color: #ef764b;
+  border-top: 6px solid #3d2c2e;
+  border-bottom: 4px solid #3d2c2e;
   justify-content: space-between;
   width: 100%;
   padding: 1rem 2rem;
@@ -33,19 +33,13 @@ header .header__bottom {
 }
 
 header .header__bottom h1 a {
-  color: #f0cf65;
-  letter-spacing: 2px;
+  color: #3d2c2e;
+  letter-spacing: 3px;
   justify-content: center;
   font-family: Lora, serif;
   font-size: 1.4rem;
-  font-weight: 200;
+  font-weight: 500;
   text-decoration: none;
-}
-
-@media screen and (width >= 1024px) {
-  header .header__bottom h1 a {
-    font-size: 1.8rem;
-  }
 }
 
 @media screen and (width >= 1280px) {
@@ -55,17 +49,17 @@ header .header__bottom h1 a {
 }
 
 header .header__bottom h1 a:hover {
-  color: #aeacbb;
-  border-bottom: .1rem solid #aeacbb;
+  border-bottom: .1rem solid #3d2c2e;
 }
 
 header .header__bottom nav {
   z-index: -1;
-  background-color: #424c55;
+  background-color: #63bace;
+  border: .14rem solid #3d2c2e;
   border-radius: 0 0 1rem 1rem;
   flex-direction: column;
   width: fit-content;
-  height: 80vh;
+  height: 70dvh;
   padding: 6.5rem 4rem 8rem;
   display: flex;
   position: absolute;
@@ -90,9 +84,10 @@ header .header__bottom nav ul.first-level {
 }
 
 header .header__bottom nav ul.first-level a {
-  color: #f0cf65;
+  color: #3d2c2e;
   font-size: 1.2rem;
-  font-weight: 200;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 @media screen and (width >= 1024px) {
@@ -101,8 +96,14 @@ header .header__bottom nav ul.first-level a {
   }
 }
 
-header .header__bottom nav ul.first-level a:hover {
-  color: #aeacbb;
+header .header__bottom nav ul.first-level a:hover, header .header__bottom nav ul.first-level a:active {
+  text-decoration: underline;
+}
+
+header .header__bottom nav ul.first-level a:focus {
+  border: .14rem solid #f5edf0;
+  outline: none;
+  text-decoration: underline;
 }
 
 @media screen and (width >= 1024px) {
@@ -119,7 +120,6 @@ header .header__bottom i {
 
 header .header__bottom i .menu__icon {
   cursor: pointer;
-  background-color: #f0cf65;
   border-radius: .2rem;
   align-items: center;
   padding: .2rem;
@@ -129,8 +129,7 @@ header .header__bottom i .menu__icon {
 }
 
 header .header__bottom i .menu__icon:hover {
-  background-color: #aeacbb;
-  transform: scale(.9)rotate(90deg);
+  transform: scale(.85)rotate(180deg);
 }
 
 footer {
@@ -147,25 +146,29 @@ footer .btn__retour-haut {
   cursor: pointer;
   opacity: .9;
   z-index: -1;
-  background-color: #424c55;
-  border: .14rem solid #f0cf65;
+  background-color: #f5edf0;
+  border: 4px solid #3d2c2e;
   border-radius: 100%;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
+  padding: 2.4rem;
   display: flex;
   position: absolute;
-  top: -3.4rem;
+  top: -2.6rem;
   right: 50%;
   transform: translateX(50%);
 }
 
 footer .btn__retour-haut i {
-  transform: scale(1.5)translate(0, -1.3rem);
+  border-radius: 5rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transform: scale(1.2)translate(0, -2rem);
 }
 
 footer .btn__retour-haut:hover {
-  background-color: #3d2c2e;
+  background-color: #63bace;
 }
 
 footer .btn__retour-haut:active {
@@ -173,11 +176,11 @@ footer .btn__retour-haut:active {
 }
 
 footer .texte__content {
-  color: #f0cf65;
+  color: #3d2c2e;
   letter-spacing: 2px;
   z-index: 1;
-  background-color: #424c55;
-  border-top: .14rem solid #f0cf65;
+  background-color: #ef764b;
+  border-top: 4px solid #3d2c2e;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -210,7 +213,7 @@ body {
 }
 
 body main {
-  background-color: #424c55;
+  background-color: #3d2c2e;
   flex-direction: column;
   justify-content: center;
   display: flex;
@@ -227,30 +230,49 @@ body main .css3-list__main-container {
 
 body main .css3-list__main-container .main-list__item {
   border-radius: .3rem;
-  box-shadow: 0 0 6px 2px #0000004d;
 }
 
-body main .css3-list__main-container .main-list__item h2 {
+body main .css3-list__main-container .main-list__item .letter-title {
   color: #3d2c2e;
+  cursor: pointer;
   text-align: center;
   -webkit-user-select: none;
   user-select: none;
-  background-color: #aeacbb;
-  padding: 1rem;
+  background-color: #ef764b;
+  border-top: 1px solid #3d2c2e;
+  border-bottom: 1px solid #3d2c2e;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2.7rem 2rem 2rem;
   font-family: Lora, serif;
   font-size: 1.6rem;
+  display: flex;
 }
 
 @media screen and (width >= 1024px) {
-  body main .css3-list__main-container .main-list__item h2 {
+  body main .css3-list__main-container .main-list__item .letter-title h2 {
     font-size: 2rem;
   }
 }
 
 @media screen and (width >= 1280px) {
-  body main .css3-list__main-container .main-list__item h2 {
+  body main .css3-list__main-container .main-list__item .letter-title h2 {
     font-size: 2.2rem;
   }
+}
+
+body main .css3-list__main-container .main-list__item .letter-title i {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+body main .css3-list__main-container .main-list__item .letter-title:hover {
+  background-color: #63bace;
+}
+
+body main .css3-list__main-container .main-list__item .letter-title:active {
+  box-shadow: inset 0 0 4px 1px #3d2c2e;
 }
 
 body main .css3-list__main-container .main-list__item .properties__container {
@@ -260,21 +282,21 @@ body main .css3-list__main-container .main-list__item .properties__container {
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .title {
-  background-color: #424c55;
+  background-color: #f5edf0;
   border-bottom: 1px solid #3d2c2e;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 1.2rem 2rem;
   display: flex;
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .title h3 {
-  color: #f0cf65;
+  color: #3d2c2e;
   letter-spacing: 2px;
   flex-direction: row;
   justify-content: space-between;
   font-size: 1.4rem;
-  font-weight: 200;
+  font-weight: 300;
   display: flex;
   position: relative;
 }
@@ -294,10 +316,15 @@ body main .css3-list__main-container .main-list__item .properties__container .ti
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .title i {
-  width: 2rem;
-  padding: .5rem 0;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  padding-top: .1rem;
   transition: transform .4s;
-  transform: scale(.9)translate(-1rem, .4rem);
+  display: flex;
+  transform: scale(.7)translate(-1rem);
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .title i .open-arrow {
@@ -310,7 +337,12 @@ body main .css3-list__main-container .main-list__item .properties__container .ti
 
 body main .css3-list__main-container .main-list__item .properties__container .title:hover {
   cursor: pointer;
-  background-color: #3d2c2e;
+  filter: brightness(1.3);
+  background-color: #63bace;
+}
+
+body main .css3-list__main-container .main-list__item .properties__container :last-child .title {
+  border: none;
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown {
@@ -352,31 +384,25 @@ body main .css3-list__main-container .main-list__item .properties__container .dr
   }
 }
 
-body main .css3-list__main-container .main-list__item .properties__container .dropdown textarea {
-  border: none;
-  border-radius: 2rem;
-  width: 100%;
-  height: 300px;
+body main .css3-list__main-container .main-list__item .properties__container .dropdown .css-text {
+  background-color: #3d2c2e;
+  border-radius: 1rem;
+  flex-flow: column wrap;
+  gap: .5rem;
   padding: 2rem;
-  box-shadow: 2px 2px 2px #0006;
+  display: flex;
 }
 
-@media screen and (width >= 768px) {
-  body main .css3-list__main-container .main-list__item .properties__container .dropdown textarea {
-    width: 85%;
-  }
+body main .css3-list__main-container .main-list__item .properties__container .dropdown .css-text p {
+  color: #ef764b;
+  letter-spacing: 1px;
+  padding: 1rem 0 .5rem;
 }
 
-@media screen and (width >= 1024px) {
-  body main .css3-list__main-container .main-list__item .properties__container .dropdown textarea {
-    width: 75%;
-  }
-}
-
-@media screen and (width >= 1280px) {
-  body main .css3-list__main-container .main-list__item .properties__container .dropdown textarea {
-    width: 60%;
-  }
+body main .css3-list__main-container .main-list__item .properties__container .dropdown .css-text span {
+  color: #63bace;
+  letter-spacing: 1px;
+  padding-left: 2rem;
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown ul {
@@ -392,7 +418,7 @@ body main .css3-list__main-container .main-list__item .properties__container .dr
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown ul a:hover {
-  color: #3d2c2e;
+  color: #63bace;
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown section.animation__exemple {
@@ -423,35 +449,35 @@ body main .css3-list__main-container .main-list__item .properties__container .dr
 
 @keyframes animation__exemple {
   0% {
-    color: #f0cf65;
+    color: #ef764b;
     background-color: #3d2c2e;
     top: 0;
     left: 0;
   }
 
   25% {
-    color: #424c55;
-    background-color: #aeacbb;
+    color: #3d2c2e;
+    background-color: #63bace;
     top: 0;
     left: 140px;
   }
 
   50% {
-    color: #f0cf65;
-    background-color: #424c55;
+    color: #ef764b;
+    background-color: #3d2c2e;
     top: 240px;
     left: 140px;
   }
 
   75% {
-    color: #424c55;
-    background-color: #f0cf65;
+    color: #3d2c2e;
+    background-color: #ef764b;
     top: 240px;
     left: 0;
   }
 
   100% {
-    color: #f0cf65;
+    color: #ef764b;
     background-color: #3d2c2e;
     top: 0;
     left: 0;
@@ -476,13 +502,13 @@ body main .css3-list__main-container .main-list__item .properties__container .dr
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown div.backface-visibility-exemple div.backface-visibility .frontface-1, body main .css3-list__main-container .main-list__item .properties__container .dropdown div.backface-visibility-exemple div.backface-visibility .frontface-2 {
-  background-color: #f0cf65;
+  background-color: #ef764b;
   border-radius: .3rem;
   padding: 2rem;
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown div.backface-visibility-exemple div.backface-visibility .backface {
-  background-color: #aeacbb;
+  background-color: #63bace;
   border-radius: .3rem;
   padding: 2rem;
 }
@@ -521,8 +547,8 @@ body main .css3-list__main-container .main-list__item .properties__container .dr
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown div.border-radius-exemple div.border-radius {
-  color: #f0cf65;
-  background-color: #424c55;
+  color: #ef764b;
+  background-color: #3d2c2e;
   flex-wrap: wrap;
   justify-content: center;
   width: 100px;
@@ -606,13 +632,13 @@ body main .css3-list__main-container .main-list__item .properties__container .dr
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown div.linear-gradient {
-  background: linear-gradient(#f0cf65, #424c55);
+  background: linear-gradient(#ef764b, #3d2c2e);
   width: 100%;
   height: 200px;
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown div.radial-gradient {
-  background: radial-gradient(#f0cf65, #424c55);
+  background: radial-gradient(#ef764b, #3d2c2e);
   width: 100%;
   height: 200px;
 }
@@ -625,8 +651,8 @@ body main .css3-list__main-container .main-list__item .properties__container .dr
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown .square, body main .css3-list__main-container .main-list__item .properties__container .dropdown .square {
-  color: #f0cf65;
-  background-color: #424c55;
+  color: #ef764b;
+  background-color: #3d2c2e;
   border-radius: .2rem;
   justify-content: center;
   align-items: center;
@@ -723,7 +749,7 @@ body main .css3-list__main-container .main-list__item .properties__container .dr
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown div.outline-offset-exemple .outline-offset {
-  background-color: #f0cf65;
+  background-color: #ef764b;
   justify-content: center;
   padding: 1rem;
   display: flex;
@@ -731,13 +757,13 @@ body main .css3-list__main-container .main-list__item .properties__container .dr
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown div.outline-offset-exemple .outline-offset._1 {
   outline-offset: .5rem;
-  border: .2rem solid #424c55;
+  border: .2rem solid #3d2c2e;
   outline: .2rem solid #3d2c2e;
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown div.outline-offset-exemple .outline-offset._2 {
   outline-offset: 1rem;
-  border: .2rem solid #424c55;
+  border: .2rem solid #3d2c2e;
   outline: .2rem dashed #3d2c2e;
 }
 
@@ -787,14 +813,14 @@ body main .css3-list__main-container .main-list__item .properties__container .dr
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown div.transition-exemple .transition {
-  background-color: #424c55;
+  background-color: #3d2c2e;
   border-radius: .5rem;
   width: 220px;
   padding: 1.5rem;
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown div.transition-exemple .transition p {
-  color: #f0cf65;
+  color: #ef764b;
   width: 180px;
   font-size: .9rem;
 }
@@ -824,8 +850,8 @@ body main .css3-list__main-container .main-list__item .properties__container .dr
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown .transform-exemple .transform {
-  color: #f0cf65;
-  background-color: #424c55;
+  color: #ef764b;
+  background-color: #3d2c2e;
   border-radius: .4rem;
   padding: 2rem;
   font-size: 1rem;
@@ -853,7 +879,7 @@ body main .css3-list__main-container .main-list__item .properties__container .dr
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown div.writing-mode-exemple {
-  color: #f0cf65;
+  color: #ef764b;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -862,7 +888,7 @@ body main .css3-list__main-container .main-list__item .properties__container .dr
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown div.writing-mode-exemple .writing-mode {
-  background-color: #424c55;
+  background-color: #3d2c2e;
   border-radius: .5rem;
   width: 60%;
   padding: 2rem;
@@ -878,10 +904,6 @@ body main .css3-list__main-container .main-list__item .properties__container .dr
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown div.writing-mode-exemple .writing-mode.vertical-rl {
   writing-mode: vertical-rl;
-}
-
-body main .css3-list__main-container :last-child ul .title {
-  border-bottom: none !important;
 }
 
 body ul {

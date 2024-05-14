@@ -41,8 +41,8 @@ body{
                 box-shadow: 0 0 6px 2px rgb(0, 0, 0, .3);
 
                 h2{
-                    background-color: var.$color-1;
-                    color: var.$color-3;
+                    background-color: var.$color-4;
+                    color: var.$color-1;
                     font-family: "Lora", serif;
                     font-size: 1.6rem;
                     padding: 1rem;
@@ -65,21 +65,20 @@ body{
 
                     .title{
                         align-items: center;
-                        background-color: var.$color-4;
+                        background-color: var.$color-3;
                         border-bottom: 1px solid var.$color-1;
                         display: flex;
-                        filter: brightness(1.1);
                         justify-content: space-between;
-                        padding: 1rem 2rem;
+                        padding: 2rem 2rem;
 
                         h3{
-                            color: var.$color-1;
+                            color: var.$color-5;
                             display: flex;
                             flex-direction: row;
                             font-size: 1.4rem;
-                            font-weight: 400;
-                            filter: brightness(1.1);
+                            font-weight: 200;
                             justify-content: space-between;
+                            letter-spacing: 2px;
                             position: relative;
     
                             @media screen and #{var.$large-up} {
@@ -96,7 +95,7 @@ body{
                         i{
                             padding: .5rem 0;
                             transition: transform .4s;
-                            transform: translate(-.2rem, .4rem);
+                            transform: scale(.9) translate(-1rem, .4rem);
                             width: 2rem;
                         
                             .open-arrow{
@@ -109,8 +108,8 @@ body{
                         }
 
                         &:hover{
+                            background-color: var.$color-1;
                             cursor: pointer;
-                            filter: brightness(.95);
                         }
                     }
             
@@ -178,7 +177,7 @@ body{
                                 letter-spacing: 1px;
 
                                 &:hover{
-                                    color: var.$color-5;
+                                    color: var.$color-1;
                                 }
                             }
                         }
@@ -207,11 +206,11 @@ body{
                             }
                             
                             @keyframes animation__exemple {
-                                0%   {background-color:var.$color-1; left:0px; top:0px;color: var.$color-2;}
-                                25%  {background-color:var.$color-4; left:140px; top:0px;color: var.$color-1;}
-                                50%  {background-color:var.$color-5; left:140px; top:240px;color: var.$color-1;}
-                                75%  {background-color:var.$color-3; left:0px; top:240px;color: var.$color-1;}
-                                100% {background-color:var.$color-1; left:0px; top:0px;color: var.$color-2;}
+                                0%   {background-color:var.$color-1; left:0px; top:0px;color: var.$color-5;}
+                                25%  {background-color:var.$color-4; left:140px; top:0px;color: var.$color-3;}
+                                50%  {background-color:var.$color-3; left:140px; top:240px;color: var.$color-5;}
+                                75%  {background-color:var.$color-5; left:0px; top:240px;color: var.$color-3;}
+                                100% {background-color:var.$color-1; left:0px; top:0px;color: var.$color-5;}
                             }
                         }
 
@@ -275,7 +274,8 @@ body{
                             justify-content: center;
     
                             div.border-radius{
-                                background-color: var.$color-5;
+                                background-color: var.$color-3;
+                                color: var.$color-5;
                                 display: flex;
                                 flex-wrap: wrap;
                                 font-size: 1rem;
@@ -360,13 +360,13 @@ body{
                         }
                         
                         div.linear-gradient{
-                            background: linear-gradient(var.$color-3, var.$color-1);
+                            background: linear-gradient(var.$color-5, var.$color-3);
                             height: 200px;
                             width: 100%;
                         }
                         
                         div.radial-gradient{
-                            background: radial-gradient(var.$color-3, var.$color-1);
+                            background: radial-gradient(var.$color-5, var.$color-3);
                             height: 200px;
                             width: 100%;
                         }
@@ -380,8 +380,9 @@ body{
 
                         .square, .square{
                             align-items: center;
-                            background-color: var.$color-5;
+                            background-color: var.$color-3;
                             border-radius: .2rem;
+                            color: var.$color-5;
                             display: flex;
                             font-size: 1.4rem;
                             font-weight: 600;
@@ -467,6 +468,7 @@ body{
                         }
     
                         div.outline-offset-exemple{
+                            
                             display: flex;
                             flex-direction: column;
                             gap: 4rem;
@@ -479,13 +481,13 @@ body{
                             }
                             
                             .outline-offset._1{
-                                border: .2rem solid var.$color-4;
+                                border: .2rem solid var.$color-3;
                                 outline: .2rem solid var.$color-1;
                                 outline-offset: .5rem;
                             }
                             
                             .outline-offset._2{
-                                border: .2rem solid var.$color-4;
+                                border: .2rem solid var.$color-3;
                                 outline: .2rem dashed var.$color-1;
                                 outline-offset: 1rem;
                             }
@@ -537,8 +539,7 @@ body{
                             gap: 2rem;
     
                             .transition{
-                                background-color: var.$color-5 !important;
-                                color: var.$color-3;
+                                background-color: var.$color-3;
                                 border-radius: .5rem;
                                 padding: 1.5rem;
                                 width: 220px;
@@ -546,6 +547,7 @@ body{
     
                             .transition p{
                                 font-size: .9rem;
+                                color: var.$color-5;
                                 width: 180px;
                             }
                             
@@ -574,9 +576,9 @@ body{
                             justify-content: center;
 
                             .transform{
-                                background-color: var.$color-5;
+                                background-color: var.$color-3;
                                 border-radius: .4rem;
-                                color: var.$color-3;
+                                color: var.$color-5;
                                 font-size: 1rem;
                                 font-weight: 300;
                                 padding: 2rem;
@@ -605,14 +607,14 @@ body{
 
                         div.writing-mode-exemple{
                             align-items: flex-start;
-                            color: var.$color-3;
+                            color: var.$color-5;
                             display: flex;
                             flex-direction: column;
                             gap: 2rem;
                             justify-content: center;
     
                             .writing-mode{
-                                background-color: var.$color-5;
+                                background-color: var.$color-3;
                                 border-radius: .5rem;
                                 padding: 2rem;
                                 width: 60%;
@@ -633,6 +635,10 @@ body{
                     }
                 }
             } 
+
+            :last-child ul .title{
+                border-bottom: none !important;
+            }
         }
     }
 
@@ -654,3 +660,8 @@ body{
         display: none !important;
     }   
 }
+
+/* 
+- ajuster textarea
+- ajuster couleur exemples 
+*/

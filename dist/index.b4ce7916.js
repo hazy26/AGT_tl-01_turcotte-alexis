@@ -11,7 +11,6 @@ navLinks.forEach((navLink)=>{
 });
 function toggleMenu() {
     nav.classList.toggle("hidden");
-    btnMenu.classList.toggle("open");
 }
 /* DROPDOWNS */ const links = document.querySelectorAll(".title");
 const arrows = document.querySelector(".down-arrow");

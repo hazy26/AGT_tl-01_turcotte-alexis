@@ -1,109 +1,129 @@
 @use 'partials/variables' as var;
 header{
     align-items: center;
-    background-color: var.$color-1;
+    background-color: var.$color-3;
     display: flex;
-    gap: .5rem;
-    height: fit-content;
+    flex-direction: column;
+    gap: 2rem;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 4rem 0 0 0;
     position: sticky;
-    top: 0;
+    top: -14.6rem;
     transition: .8s;
     z-index: 1;
-
-    h1 a{
-        color: var.$color-3;
-        font-family: "Lora", serif;
-        font-size: 1.2rem;
+    
+    span{
+        color: var.$color-5;
+        font-size: 6rem;
         font-weight: 200;
-        letter-spacing: 2px;
-        text-decoration: none;
-
-        @media screen and #{var.$large-up} {
-            font-size: 1.8rem;
-        }
-
-        @media screen and #{var.$x-large-up} {
-            font-size: 2rem;
-        }
-
-        &:hover{
-            border-bottom: .1rem solid var.$color-5;
-            color: var.$color-5;
-        }
+        letter-spacing: 1rem;
+        text-align: center;
     }
 
-    nav{
-        background-color: var.$color-1;
-        border-radius: 0 0 1rem 1rem;
+    .header__bottom{
+        background-color: var.$color-3;
+        border-top: 1px solid var.$color-5;
+        border-bottom: 1px solid var.$color-5;
         display: flex;
-        flex-direction: column;
-        height: 80vh;
-        overflow: scroll;
-        padding: 7.5rem 6rem;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: fit-content;
-        z-index: -1;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        position: relative;
+        width: 100%;
 
-        ul.first-level{
-            align-self: center;
-            display: flex;
-            flex-flow: column wrap;
-            font-size: 1.5rem;
-            gap: 2rem;
-            justify-content: center;
-            
-            @media screen and #{var.$large-up} {
-                gap: 3rem;
-            }
+        h1{
 
             a{
-                color: var.$color-3;
-                font-size: 1.2rem;
+                color: var.$color-5;
+                font-family: "Lora", serif;
+                font-size: 1.4rem;
                 font-weight: 200;
-
+                justify-content: center;
+                letter-spacing: 2px;
+                text-decoration: none;
+        
                 @media screen and #{var.$large-up} {
+                    font-size: 1.8rem;
+                }
+        
+                @media screen and #{var.$x-large-up} {
                     font-size: 2rem;
                 }
-
-                &:hover{
-                    color: var.$color-5;
-                }
-            }
         
-            @media screen and (min-width: 1024px){
-                .level-2__link{
-                    font-size: 1.4rem;
+                &:hover{
+                    border-bottom: .1rem solid var.$color-4;
+                    color: var.$color-4;
                 }
             }
         }
-    }
-
-    .menu__icon{
-        align-items: center;
-        background-color: var.$color-3;
-        border-radius: .2rem;
-        cursor: pointer;
-        display: flex;
-        padding: .1rem .3rem;
-        transition: .8s;
-        transform: scale(.9);
-
-        &:hover{
-            background-color: var.$color-5;
+    
+        nav{
+            background-color: var.$color-3;
+            border-radius: 0 0 1rem 1rem;
+            display: flex;
+            flex-direction: column;
+            height: 80vh;
+            overflow: scroll;
+            padding: 6.5rem 4rem 8rem 4rem;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: fit-content;
+            z-index: -1;
+    
+            ul.first-level{
+                align-self: center;
+                display: flex;
+                flex-flow: column wrap;
+                font-size: 1.5rem;
+                gap: 2rem;
+                justify-content: center;
+                
+                @media screen and #{var.$large-up} {
+                    gap: 3rem;
+                }
+    
+                a{
+                    color: var.$color-5;
+                    font-size: 1.2rem;
+                    font-weight: 200;
+    
+                    @media screen and #{var.$large-up} {
+                        font-size: 2rem;
+                    }
+    
+                    &:hover{
+                        color: var.$color-4;
+                    }
+                }
+            
+                @media screen and (min-width: 1024px){
+                    .level-2__link{
+                        font-size: 1.4rem;
+                    }
+                }
+            }
         }
-
-        &:active{
-            filter: brightness(1.4);
+    
+        i{
+            align-self: flex-end;
+            align-items: center;
+            display: flex;
+    
+            .menu__icon{
+                align-items: center;
+                background-color: var.$color-5;
+                border-radius: .2rem;
+                cursor: pointer;
+                display: flex;
+                padding: .2rem;
+                transition: .8s;
+                transform: scale(1);
+        
+                &:hover{
+                    background-color: var.$color-4;
+                    transform: scale(.9) rotate(90deg);
+                }
+            } 
         }
-    }
-
-    .open{
-        background-color: var.$color-5;
-        filter: brightness(1.2);
-        transform: scale(1) rotate(180deg);
-    }
+    } 
 }

@@ -23,6 +23,8 @@ const dropdowns = document.querySelectorAll('.title');
 dropdowns.forEach(dropdown => {
     dropdown.addEventListener('click', () => {
         dropdown.nextElementSibling.classList.toggle('hidden');
+        dropdown.lastElementChild.classList.toggle('open');
+        dropdown.classList.toggle('open-section');
     });
 });
 
@@ -30,6 +32,8 @@ const mainDropdowns = document.querySelectorAll('.letter-title');
 mainDropdowns.forEach(dropdown => {
     dropdown.addEventListener('click', () => {
         dropdown.nextElementSibling.classList.toggle('hidden');
+        dropdown.lastElementChild.classList.toggle('open');
+        dropdown.classList.toggle('open-section');
     });
 });
 

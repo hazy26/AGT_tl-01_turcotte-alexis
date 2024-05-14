@@ -78,10 +78,6 @@ body{
                         transition: .3s;
                     }
 
-                    &:hover .arrow{
-                        transform: rotate(90deg);
-                    }
-
                     &:active .arrow{
                         transform: scale(.75) rotate(180deg);
                     }
@@ -89,8 +85,12 @@ body{
                     &:active{
                         box-shadow: inset 0 0 4px 1px var.$color-1;
                     }
-                } 
 
+                    .open{
+                        transform: scale(1.2) rotate(180deg);
+                    }
+                } 
+        
                 .properties__container{
                     border-radius: 0 0 .3rem .3rem;
                     display: flex;
@@ -144,15 +144,15 @@ body{
                             filter: brightness(1.3);
                         }
 
-                        &:hover .arrow{
-                            transform: rotate(90deg) scale(.7) translate(.5rem , .5rem);
-                        }
-
                         &:active .arrow{
                             transform: rotate(180deg) scale(.7) translate(1rem , -.5rem); 
                         }
+                        
+                        .open{
+                            transform: rotate(180deg) scale(.7) translate(1rem , -.5rem);
+                        }
                     }
-            
+
                     :last-child .title{
                         border: none;
                     }
@@ -679,6 +679,13 @@ body{
                             }
                         }
                     }
+
+                    
+                }
+                
+                .open-section{
+                    background-color: var.$color-4 !important;
+                    filter: brightness(1.1);
                 }
             } 
         }

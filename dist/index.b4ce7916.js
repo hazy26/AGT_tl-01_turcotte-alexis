@@ -16,12 +16,16 @@ function toggleMenu() {
 dropdowns.forEach((dropdown)=>{
     dropdown.addEventListener("click", ()=>{
         dropdown.nextElementSibling.classList.toggle("hidden");
+        dropdown.lastElementChild.classList.toggle("open");
+        dropdown.classList.toggle("open-section");
     });
 });
 const mainDropdowns = document.querySelectorAll(".letter-title");
 mainDropdowns.forEach((dropdown)=>{
     dropdown.addEventListener("click", ()=>{
         dropdown.nextElementSibling.classList.toggle("hidden");
+        dropdown.lastElementChild.classList.toggle("open");
+        dropdown.classList.toggle("open-section");
     });
 });
 /* SCROLL */ const btnRetourHaut = document.querySelector(".btn__retour-haut");

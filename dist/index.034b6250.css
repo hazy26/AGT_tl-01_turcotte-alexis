@@ -397,14 +397,16 @@ body main .css3-list__main-container .main-list__item .properties__container .dr
   border-radius: 1rem;
   flex-flow: column wrap;
   gap: .5rem;
-  padding: 2rem;
+  max-width: 650px;
+  padding: 1rem 2rem;
+  font-size: .9rem;
   display: flex;
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown .css-text p {
   color: #ef764b;
   letter-spacing: 1px;
-  padding: 1rem 0 .5rem;
+  padding: .5rem 0;
 }
 
 body main .css3-list__main-container .main-list__item .properties__container .dropdown .css-text span {

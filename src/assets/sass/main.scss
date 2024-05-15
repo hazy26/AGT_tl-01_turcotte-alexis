@@ -195,13 +195,15 @@ body{
                             display: flex;
                             flex-direction: column;
                             flex-wrap: wrap;
+                            font-size: .9rem;
                             gap: .5rem;
-                            padding: 2rem 2rem;
+                            max-width: 650px;
+                            padding: 1rem 2rem;
 
                             p{
                                 color: var.$color-5;
                                 letter-spacing: 1px;
-                                padding: 1rem 0 .5rem 0;
+                                padding: .5rem 0;
                             }
 
                             span{
